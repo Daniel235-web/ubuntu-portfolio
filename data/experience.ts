@@ -26,7 +26,7 @@ export const experience = [
       'Jira',
       'Bitbucket',
       'Metabase',
-      'Django'
+      'Django',
     ],
   },
   {
@@ -50,7 +50,7 @@ export const experience = [
       'Yup',
       'Docker',
       'Pusher.js',
-      'Django'
+      'Django',
     ],
   },
   {

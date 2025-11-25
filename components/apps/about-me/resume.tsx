@@ -7,7 +7,7 @@ const Resume = () => {
       <div className="h-full w-full">
         <iframe
           className="h-full w-full border-none"
-          src="/about-me/resume/Sakil-Khan-Resume.pdf"
+          src="/about-me/resume/Samuel Emmanuel D Resume.pdf"
           frameBorder="0"
         />
       </div>

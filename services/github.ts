@@ -13,7 +13,7 @@ export const getRepos = async () => {
       redirect: 'follow',
     };
     const response = await fetch(
-      'https://api.github.com/users/sakilk130/repos?per_page=10&page=1&type=owner&sort=pushed&direction=desc',
+      'https://api.github.com/users/Daniel235-web/repos?per_page=20&page=1&type=owner&sort=pushed&direction=desc',
       requestOptions,
     );
     const json: any = await response.json();

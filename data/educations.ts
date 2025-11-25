@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 export const educations = [
-    {
+  {
     id: _.uniqueId(),
     timeLine: '2021 - 2025',
     degree: 'Bachelor Of Technology in Mechanical Engineering',
