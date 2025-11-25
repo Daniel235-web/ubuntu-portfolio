@@ -9,7 +9,7 @@ const VSCode = ({ id }: VSCodeProps) => {
     <div className="flex h-full flex-col">
       <div className="flex-grow">
         <iframe
-          src="https://github1s.com/sakilk130/ubuntu-portfolio/blob/HEAD/components/ubuntu/index.tsx"
+          src="https://github1s.com/Daniel235-web/ubuntu-portfolio/blob/HEAD/components/ubuntu/index.tsx"
           frameBorder="0"
           title="VsCode"
           className="bg-ub-cool-grey h-full w-full"

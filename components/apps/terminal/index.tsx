@@ -136,28 +136,28 @@ const Terminal = ({ id }: TerminalProps) => {
           <div className="whitespace-pre-wrap">
             <span>total 0</span>
             <br />
-            <span className="text-green-500">drwxr-xr-x</span> 2 sakilk130
-            sakilk130 4096 Jul 1 10:00{' '}
+            <span className="text-green-500">drwxr-xr-x</span> 2 daniel235
+            daniel235 4096 Jul 1 10:00{' '}
             <span className="text-yellow-500">Desktop</span>
             <br />
-            <span className="text-green-500">drwxr-xr-x</span> 2 sakilk130
-            sakilk130 4096 Jul 1 10:00{' '}
+            <span className="text-green-500">drwxr-xr-x</span> 2 daniel235
+            daniel235 4096 Jul 1 10:00{' '}
             <span className="text-yellow-500">Documents</span>
             <br />
-            <span className="text-green-500">drwxr-xr-x</span> 2 sakilk130
-            sakilk130 4096 Jul 1 10:00{' '}
+            <span className="text-green-500">drwxr-xr-x</span> 2 daniel235
+            daniel235 4096 Jul 1 10:00{' '}
             <span className="text-yellow-500">Downloads</span>
             <br />
-            <span className="text-green-500">drwxr-xr-x</span> 2 sakilk130
-            sakilk130 4096 Jul 1 10:00{' '}
+            <span className="text-green-500">drwxr-xr-x</span> 2 daniel235
+            daniel235 4096 Jul 1 10:00{' '}
             <span className="text-yellow-500">Music</span>
             <br />
-            <span className="text-green-500">drwxr-xr-x</span> 2 sakilk130
-            sakilk130 4096 Jul 1 10:00{' '}
+            <span className="text-green-500">drwxr-xr-x</span> 2 daniel235
+            daniel235 4096 Jul 1 10:00{' '}
             <span className="text-yellow-500">Pictures</span>
             <br />
-            <span className="text-green-500">drwxr-xr-x</span> 2 sakilk130
-            sakilk130 4096 Jul 1 10:00{' '}
+            <span className="text-green-500">drwxr-xr-x</span> 2 daniel235
+            daniel235 4096 Jul 1 10:00{' '}
             <span className="text-yellow-500">Videos</span>
           </div>
         ),
@@ -165,12 +165,12 @@ const Terminal = ({ id }: TerminalProps) => {
       };
     } else if (text === 'pwd') {
       return {
-        response: '/home/sakilk130',
+        response: '/home/daniel235',
         directory: '',
       };
     } else if (text === 'whoami') {
       return {
-        response: 'sakilk130',
+        response: 'daniel235',
         directory: '',
       };
     } else if (text === 'help') {
@@ -233,7 +233,7 @@ const Terminal = ({ id }: TerminalProps) => {
       {terminalRows.map((row, index) => (
         <Fragment key={index}>
           <div className="mb-1 flex items-center">
-            <span className="font-bold text-green-500">sakilk130@ubuntu</span>
+            <span className="font-bold text-green-500">daniel235@ubuntu</span>
             <span className="font-bold text-white">:</span>
             <span className="font-bold text-blue-500">~</span>
             <span className="font-bold text-blue-500">{row.directory}</span>

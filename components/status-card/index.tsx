@@ -50,7 +50,7 @@ const StatusCard = ({}: StatusCardProps) => {
       </div>
       <hr className="my-2 h-px border-0 bg-gray-700" />
       <div className="flex flex-col">
-        <Accordion title="Sakil's Wifi" icon={<Wifi />}>
+        <Accordion title="Emmanuel's Network" icon={<Wifi />}>
           <div className="">
             <p className="p-1 px-5 hover:bg-slate-700">Select Network</p>
             <p className="p-1 px-5 hover:bg-slate-700">Power Off</p>

@@ -3,7 +3,7 @@ import _ from 'lodash';
 export const experience = [
   {
     id: _.uniqueId(),
-    timeline: 'Jul 2023 - Present',
+    timeline: 'Jul 2023 - 2024',
     company: 'SSL Wireless',
     url: 'https://www.sslwireless.com/',
     position: 'Software Specialist',

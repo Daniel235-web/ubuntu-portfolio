@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import _, { max } from 'lodash';
+import { ComponentType } from 'react';
 
 import {
   Chrome,
@@ -16,7 +17,7 @@ interface AllAppsState {
   imageSrc: string;
   isFavorite: boolean;
   isOpen: boolean;
-  app: any; //FIXME:
+  app: ComponentType<{ id: string }>;
   isMinimized: boolean;
   position: {
     x: number;
@@ -28,6 +29,22 @@ interface AllAppsState {
 }
 
 const initialState: AllAppsState[] = [
+  {
+    id: _.uniqueId(),
+    title: 'About Me',
+    slug: 'about-me',
+    imageSrc: '/myImage.jpeg',
+    isFavorite: true,
+    isOpen: true,
+    app: AboutMe,
+    isMinimized: false,
+    position: {
+      x: 0,
+      y: 0,
+    },
+    maximized: false,
+    zIndex: 0,
+  },
   {
     id: _.uniqueId(),
     title: 'Chrome',
@@ -52,22 +69,6 @@ const initialState: AllAppsState[] = [
     isFavorite: true,
     isOpen: false,
     app: Calculator,
-    isMinimized: false,
-    position: {
-      x: 0,
-      y: 0,
-    },
-    maximized: false,
-    zIndex: 0,
-  },
-  {
-    id: _.uniqueId(),
-    title: 'About Me',
-    slug: 'about-me',
-    imageSrc: '/apps/user-home.png',
-    isFavorite: true,
-    isOpen: false,
-    app: AboutMe,
     isMinimized: false,
     position: {
       x: 0,
@@ -147,6 +148,12 @@ export const appApps = createSlice({
   initialState,
   reducers: {
     openApp: (state, action: PayloadAction<string>) => {
+      // Close all apps first
+      state.forEach((app) => {
+        app.isOpen = false;
+      });
+      
+      // Then open the selected app
       const findApp = state.find((app) => app.id === action.payload);
       if (findApp) {
         findApp.isOpen = true;
