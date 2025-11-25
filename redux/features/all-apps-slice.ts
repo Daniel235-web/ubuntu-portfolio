@@ -152,7 +152,7 @@ export const appApps = createSlice({
       state.forEach((app) => {
         app.isOpen = false;
       });
-      
+
       // Then open the selected app
       const findApp = state.find((app) => app.id === action.payload);
       if (findApp) {

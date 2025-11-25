@@ -17,10 +17,12 @@ const RightSidebar = ({}: RightSidebarProps) => {
       {favoriteApps.map((item) => (
         <Tooltip text={item.title} key={item.id} position="left">
           <div
-            className="relative m-2 flex w-auto items-center gap-0 rounded p-2 outline-none transition hover:bg-white hover:bg-opacity-10 cursor-pointer"
+            className="relative m-2 flex w-auto cursor-pointer items-center gap-0 rounded p-2 outline-none transition hover:bg-white hover:bg-opacity-10"
             onClick={() => dispatch(openApp(item.id))}
           >
-            {item.isOpen && <div className="h-1.5 w-1.5 rounded-full bg-white mr-2" />}
+            {item.isOpen && (
+              <div className="mr-2 h-1.5 w-1.5 rounded-full bg-white" />
+            )}
             <Image
               src={item.imageSrc}
               alt={item.title}

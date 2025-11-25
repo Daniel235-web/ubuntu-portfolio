@@ -27,11 +27,11 @@ const SidebarMenuItem = ({
       onClick={() => dispatch(openApp(id))}
     >
       {isOpen && <div className="h-1 w-1 rounded-full bg-white" />}
-      <Image 
-        src={imageSrc} 
-        alt={title} 
-        height={30} 
-        width={30} 
+      <Image
+        src={imageSrc}
+        alt={title}
+        height={30}
+        width={30}
         className={isCircular ? 'rounded-full' : ''}
       />
     </div>
