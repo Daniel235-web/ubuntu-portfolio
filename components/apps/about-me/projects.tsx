@@ -55,7 +55,7 @@ const Projects = () => {
                     {item.name.toLowerCase()}
                   </div>
                   <iframe
-                    src={`https://ghbtns.com/github-btn.html?user=sakilk130&repo=${item.name}&type=star&count=true`}
+                    src={`https://ghbtns.com/github-btn.html?user=Daniel235-web&repo=${item.name}&type=star&count=true`}
                     frameBorder="0"
                     scrolling="0"
                     width="150"

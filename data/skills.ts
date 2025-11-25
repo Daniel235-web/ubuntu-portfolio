@@ -53,6 +53,13 @@ export const frontend = [
 
 export const backend = [
   {
+      id: _.uniqueId(),
+    name: 'Django',
+    image:'https://img.shields.io/badge/-Django-092E20?style=flat&logo=django&logoColor=white&labelColor=092E20&color=092E20',
+    
+
+  },
+  {
     id: _.uniqueId(),
     name: 'Node.js',
     image:
@@ -85,6 +92,11 @@ export const backend = [
 ];
 
 export const databaseCloud = [
+  {
+    id: _.uniqueId(),
+    name: 'PostgreSQL',
+    image:'https://img.shields.io/badge/-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white&labelColor=336791&color=336791',
+  },
   {
     id: _.uniqueId(),
     name: 'MySQL',

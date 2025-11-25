@@ -7,7 +7,7 @@ const About = () => {
       <div className="my-4 w-20  md:w-28">
         <Image
           src="/myImage.jpeg"
-          alt="Sakil"
+          alt="Emmanuel"
           className="w-full rounded-full"
           height={300}
           width={500}
@@ -15,20 +15,20 @@ const About = () => {
       </div>
       <div className="mb-6 mt-4 px-1 text-center text-lg md:mt-8 md:text-2xl">
         <div>
-          Hi there, I&apos;m <span className="font-bold">Sakil! 👋</span>
+          Hi there, I&apos;m <span className="font-bold">Emmanuel</span>
         </div>
         <div className="ml-1 font-normal">
-          A passionate{' '}
+          A{' '}
           <span className="font-bold text-orange-600">
-            Software Engineer 💻✨
+            Software Engineer 
           </span>{' '}
         </div>
       </div>
       <ul className="emoji-list mt-4 w-5/6 text-sm leading-tight tracking-tight md:w-3/4 md:text-base">
         <li className="list-alumnus">
-          I’m a <span className="font-medium">Software Engineer 🤓</span>{' '}
+          I’m a <span className="font-medium">Software Engineer </span>{' '}
           specialized in the{' '}
-          <span className="font-medium">Node.js/React.js ecosystem</span> with
+          <span className="font-medium">Node.js/React.js/Django/PostgreSQL ecosystem</span> with
           <span className="text-orange-600">
             {' '}
             {yearsOfExperience}+ years of professional experience
@@ -36,15 +36,15 @@ const About = () => {
           . I am committed to continuously enhancing my skills to effectively
           solve{' '}
           <span className="text-orange-600">
-            real-world problems through technology 🌍
+            real-world problems through technology 
           </span>
           . Here are my key specializations:
           <ul className="mt-2 list-inside list-disc">
             <li>
               <span className="text-orange-600">
-                JavaScript Stack Advocate:
+                JavaScript, python  Stacks Advocate:
               </span>{' '}
-              Specializing in JavaScript with a willingness to learn additional
+              Specializing in JavaScript and python with a willingness to learn additional
               languages.
             </li>
             <li>
@@ -60,7 +60,7 @@ const About = () => {
             </li>
             <li>
               <span className="text-orange-600">Problem Solver at Heart:</span>{' '}
-              Embrace challenges that push me to grow and improve 💪.
+              Embrace challenges that push me to grow and improve .
             </li>
           </ul>
         </li>

@@ -7,12 +7,13 @@ export const experience = [
     company: 'SSL Wireless',
     url: 'https://www.sslwireless.com/',
     position: 'Software Specialist',
-    location: 'Dhaka, Bangladesh',
+    location: 'Remote',
     description:
       'SSL Wireless is recognized for its rapid development and efficient project execution by working with industry-standard technologies. SSL Wireless mounts on its decade long industry experience, superior technical skills and highest quality of support services to provide scalable IT solutions as a leading Software development and services company. It has deep infiltration in the Value-Added Services, Banking, Corporate, and FinTech industry of Bangladesh.',
     tools: [
       'Next.js',
       'TypeScript',
+      'python',
       'React',
       'Redux',
       'Ant Design',
@@ -25,6 +26,7 @@ export const experience = [
       'Jira',
       'Bitbucket',
       'Metabase',
+      'Django'
     ],
   },
   {
@@ -33,11 +35,12 @@ export const experience = [
     company: 'Sheba Technologies Limited (STL)',
     url: 'https://shebatech.com.bd/',
     position: 'Software Engineer',
-    location: 'Dhaka, Bangladesh',
+    location: 'Remote',
     description:
       'Sheba Technologies Limited (STL) is part of the Sheba Group conglomerate which has been in Tech business for almost quarter of a century. STL is fully committed to bring world class technologically advanced Business Process Automation by delivering architecturally superior Software solution, Off-the-Shelf customizable Software, Artificial Intelligence and Machine Learning to our esteemed clients who are also our long-term strategic partners.',
     tools: [
       'TypeScript',
+      'Python',
       'React',
       'Redux',
       'Material UI',
@@ -47,6 +50,7 @@ export const experience = [
       'Yup',
       'Docker',
       'Pusher.js',
+      'Django'
     ],
   },
   {
@@ -55,7 +59,7 @@ export const experience = [
     company: 'PAP International Ltd.',
     url: 'https://papint.asia/',
     position: 'Software Engineer',
-    location: 'Dhaka, Bangladesh',
+    location: 'Remote',
     description:
       'PAP International is a Technology development and Business solution provider that covers all areas of the Industries.The company is now fully setup and operating in Bangladesh as an extension of the parent company in UK.',
     tools: [
@@ -71,6 +75,7 @@ export const experience = [
       'Redis',
       'EJS',
       'PHP',
+      'Django',
     ],
   },
 ];

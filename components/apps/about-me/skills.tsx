@@ -47,9 +47,9 @@ const Skills = () => {
           <ul className="mt-2 list-inside list-disc">
             <li>
               🚀 My strong focus is on
-              <span className="text-orange-600"> TypeScript</span>,{' '}
-              <span className="text-orange-600"> React</span> , and{' '}
-              <span className="text-orange-600"> Node.js</span>.
+              <span className="text-orange-600"> TypeScript/Javascript/Python</span>,{' '}
+              <span className="text-orange-600"> React/Nextj.s</span> , and{' '}
+              <span className="text-orange-600"> Node.js/Django</span>.
             </li>
             <li>
               ⚡ I thrive in creating{' '}
