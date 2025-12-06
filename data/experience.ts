@@ -1,9 +1,55 @@
 import _ from 'lodash';
 
 export const experience = [
+
   {
     id: _.uniqueId(),
-    timeline: 'Jul 2023 - 2024',
+    timeline: ' October 2025 - November 2025 ',
+    company: 'DevPost',
+    url: 'https://devpost.com/software/govchain-auiqkr?ref_content=user-portfolio&ref_feature=in_progress',
+    position: 'Govchain Development',
+    location: 'Oline Hackathon',
+    description:'A blockchain that tracks the allocation and spending of public funds down to the community level, allowing citizens to monitor transactions in real time. ',
+    tools: [
+      'Frame',
+      'Rust',
+      'Polkadot-SDK',
+      'Subtrate',
+      'polkaVM',
+      'Foundary',
+      'hardhat',
+      'DeepSeek',
+    ],
+  },
+  {
+    id: _.uniqueId(),
+    timeline: 'April 2025 - August 2025',
+    company: 'OpenGuild.',
+    url: 'https://openguild.wtf/',
+    position: 'Blockchain Developer',
+    location: 'Remote',
+    description:
+    'OpenGuild is a community of Web 3.0 builders who contribute to open-source projects, learn, and connect enthusiasts together ',
+    tools: [
+      'Frame',
+      'Rust',
+      'Solidity',
+      'React.js',
+      'ink',
+      'Polkadot-SDK',
+      'Subtrate',
+      'polkaVM',
+      'Foundary',
+      'hardhat',
+      'DeepSeek',
+      
+      
+    ],
+  },
+
+  {
+    id: _.uniqueId(),
+    timeline: 'July 2024 - March 2025',
     company: 'SSL Wireless',
     url: 'https://www.sslwireless.com/',
     position: 'Software Specialist',
@@ -31,7 +77,31 @@ export const experience = [
   },
   {
     id: _.uniqueId(),
-    timeline: 'Mar 2022 - Jun 2023',
+    timeline: ' January 2024 - Jun 2024',
+    company: 'Personal Project',
+    url: 'https://github.com/Daniel235-web/Building-Full-Stack-DeFi-Application',
+    position: 'Blochain Development',
+    location: 'Nigeria',
+    description:'A comprehensive decentralized finance (DeFi) platform built with modern web3 technologies, featuring an automated market maker (AMM), liquidity pools, token swapping, and staking capabilities.',
+    tools: [
+      'TypeScript',
+      'JavaScript',
+      'Solidity',
+      'ethereum Blockhain',
+      'React',
+      'Redux',
+      'Material UI',
+      'React Query',
+      'HTML',
+      'hardhat',
+      'Foundary',
+      
+    ],
+  },
+  
+  {
+    id: _.uniqueId(),
+    timeline: ' January 2022 - November 2023',
     company: 'Sheba Technologies Limited (STL)',
     url: 'https://shebatech.com.bd/',
     position: 'Software Engineer',
@@ -55,7 +125,7 @@ export const experience = [
   },
   {
     id: _.uniqueId(),
-    timeline: 'Jan 2021 - Feb 2022',
+    timeline: 'Jan 2021 - December 2021',
     company: 'PAP International Ltd.',
     url: 'https://papint.asia/',
     position: 'Software Engineer',

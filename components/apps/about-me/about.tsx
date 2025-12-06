@@ -19,7 +19,10 @@ const About = () => {
           Hi there, I&apos;m <span className="font-bold">Emmanuel</span>
         </div>
         <div className="ml-1 font-normal">
-          A <span className="font-bold text-orange-600">Full Stack and Blockchain  Engineer</span>{' '}
+          A{' '}
+          <span className="font-bold text-orange-600">
+            Full Stack and Blockchain Engineer
+          </span>{' '}
         </div>
       </div>
       <ul className="emoji-list mt-4 w-5/6 text-sm leading-tight tracking-tight md:w-3/4 md:text-base">
@@ -27,12 +30,14 @@ const About = () => {
           I’m a <span className="font-medium">Software Engineer </span>{' '}
           specialized in the{' '}
           <span className="font-medium">
-            Node.js/React.js/Django/PostgreSQL and ethereum/polkadot/polygon ecosystem
+            Node.js/React.js/Django/PostgreSQL and ethereum/polkadot/polygon
+            ecosystem
           </span>{' '}
           with
           <span className="text-orange-600">
             {' '}
-            {yearsOfExperience}+ years of professional experience in web2 and web3
+            {yearsOfExperience}+ years of professional experience in web2 and
+            web3
           </span>
           . I am committed to continuously enhancing my skills to effectively
           solve{' '}
@@ -43,10 +48,10 @@ const About = () => {
           <ul className="mt-2 list-inside list-disc">
             <li>
               <span className="text-orange-600">
-                JavaScript, python and Rust  Stacks Advocate:
+                JavaScript, python and Rust Stacks Advocate:
               </span>{' '}
-              Specializing in JavaScript, Python, Solidity and  Rust with a willingness to learn
-              additional languages.
+              Specializing in JavaScript, Python, Solidity and Rust with a
+              willingness to learn additional languages.
             </li>
             <li>
               <span className="text-orange-600">Continuous Improvement:</span>{' '}
@@ -65,8 +70,8 @@ const About = () => {
             </li>
             <li>
               <span className="text-orange-600">Reliable Team Player:</span>{' '}
-              Offering exceptional analytical and time management skills and the important ability to think critically and solve complex promblems 
-
+              Offering exceptional analytical and time management skills and the
+              important ability to think critically and solve complex promblems
             </li>
           </ul>
         </li>

@@ -1,6 +1,5 @@
 # Emmanuel's Professional Portfolio
 
-
 A sophisticated, modern portfolio application inspired by the Ubuntu desktop environment. This portfolio showcases professional achievements, technical expertise, and project work with an intuitive, visually engaging interface.
 
 ## 🌐 Live Demo
