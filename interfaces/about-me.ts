@@ -3,5 +3,5 @@ export type ActiveTab =
   | 'education'
   | 'skills'
   | 'projects'
-  | 'resume'
+  | 'cv'
   | 'experience';

@@ -48,7 +48,7 @@ const AboutMe = () => {
         {activeTab === 'about' && <About />}
         {activeTab === 'experience' && <Experience />}
         {activeTab === 'education' && <Education />}
-        {activeTab === 'resume' && <Resume />}
+        {activeTab === 'cv' && <Resume />}
         {activeTab === 'projects' && <Projects />}
         {activeTab === 'skills' && <Skills />}
       </div>
