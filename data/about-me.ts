@@ -26,7 +26,7 @@ export const sidebarItems = [
   },
   {
     id: 'resume',
-    title: 'Resume',
+    title: 'CV',
     imageSrc: '/about-me/download.svg',
   },
 ];
