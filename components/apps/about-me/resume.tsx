@@ -2,7 +2,7 @@ const Resume = () => {
   return (
     <div className="h-full w-full p-5">
       <div className="mb-10 text-center text-2xl font-bold text-orange-600 md:text-3xl">
-        Resume
+        CV
       </div>
       <div className="h-full w-full">
         <iframe

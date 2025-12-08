@@ -55,27 +55,32 @@ export const backend = [
   {
     id: _.uniqueId(),
     name: 'Polygon',
-    image:'https://img.shields.io/badge/-Polygon-8247E5?style=flat&logo=polygon&logoColor=white&labelColor=8247E5&color=8247E5',
+    image:
+      'https://img.shields.io/badge/-Polygon-8247E5?style=flat&logo=polygon&logoColor=white&labelColor=8247E5&color=8247E5',
   },
   {
     id: _.uniqueId(),
     name: 'Ethereum ',
-    image:'https://img.shields.io/badge/-Ethereum-3C3C3D?style=flat&logo=ethereum&logoColor=white&labelColor=3C3C3D&color=627EEA',
+    image:
+      'https://img.shields.io/badge/-Ethereum-3C3C3D?style=flat&logo=ethereum&logoColor=white&labelColor=3C3C3D&color=627EEA',
   },
   {
     id: _.uniqueId(),
     name: 'Polkadot ',
-    image:'https://img.shields.io/badge/-Polkadot-E6007A?style=flat&logo=polkadot&logoColor=white&labelColor=E6007A&color=E6007A',
+    image:
+      'https://img.shields.io/badge/-Polkadot-E6007A?style=flat&logo=polkadot&logoColor=white&labelColor=E6007A&color=E6007A',
   },
   {
     id: _.uniqueId(),
     name: 'FRAME',
-    image:'https://img.shields.io/badge/-FRAME-E6007A?style=flat&logo=polkadot&logoColor=white&labelColor=E6007A&color=E6007A',
+    image:
+      'https://img.shields.io/badge/-FRAME-E6007A?style=flat&logo=polkadot&logoColor=white&labelColor=E6007A&color=E6007A',
   },
   {
     id: _.uniqueId(),
     name: 'Solidity',
-    image:'https://img.shields.io/badge/-Solidity-363636?style=flat&logo=solidity&logoColor=white&labelColor=363636&color=8C8C8C',
+    image:
+      'https://img.shields.io/badge/-Solidity-363636?style=flat&logo=solidity&logoColor=white&labelColor=363636&color=8C8C8C',
   },
   {
     id: _.uniqueId(),
