@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const About = () => {
-  const yearsOfExperience = new Date().getFullYear() - 2021;
+  const yearsOfExperience = new Date().getFullYear() - 2020;
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="my-4 w-20  md:w-28">
