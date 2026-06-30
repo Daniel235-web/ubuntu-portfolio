@@ -29,6 +29,19 @@ const ImageViewer = ({ id }: ImageViewerProps) => {
   // Get current node details
   const node = fileSystem[activePath];
 
+  // Get all images in the filesystem for fallback gallery
+  const allImages = useMemo(() => {
+    return Object.keys(fileSystem)
+      .filter((path) => {
+        const item = fileSystem[path];
+        return item.type === 'file' && !!item.imageSrc;
+      })
+      .map((path) => ({
+        path,
+        node: fileSystem[path],
+      }));
+  }, [fileSystem]);
+
   // Get sibling images in the same folder
   const siblings = useMemo(() => {
     if (!activePath) return [];
@@ -83,10 +96,41 @@ const ImageViewer = ({ id }: ImageViewerProps) => {
     }
   };
 
-  if (!node || node.type !== 'file' || !node.imageSrc) {
+  if (!activePath || !node || node.type !== 'file' || !node.imageSrc) {
     return (
-      <div className="flex h-full w-full items-center justify-center bg-zinc-950 text-sm text-zinc-500">
-        No image loaded
+      <div className="flex h-full w-full flex-col overflow-y-auto bg-zinc-950 p-6 font-sans text-zinc-100">
+        <h2 className="mb-2 text-lg font-semibold text-zinc-200">
+          Image Gallery
+        </h2>
+        <p className="mb-6 text-xs text-zinc-500">
+          Select an image file from the system to open and view it.
+        </p>
+
+        {allImages.length === 0 ? (
+          <div className="flex flex-grow items-center justify-center text-sm text-zinc-600">
+            No images found in the system
+          </div>
+        ) : (
+          <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
+            {allImages.map(({ path, node: imgNode }) => (
+              <button
+                key={path}
+                onClick={() =>
+                  dispatch(openAppWithPath({ slug: 'image-viewer', path }))
+                }
+                className="group flex flex-col items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900 p-2 transition hover:scale-105 hover:border-orange-500 hover:bg-zinc-800"
+              >
+                <div
+                  className="h-20 w-20 rounded border border-zinc-700 bg-cover bg-center shadow-md"
+                  style={{ backgroundImage: `url(${imgNode.imageSrc})` }}
+                />
+                <span className="line-clamp-2 w-full break-all text-[11px] text-zinc-400 group-hover:text-zinc-200">
+                  {imgNode.name}
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     );
   }
