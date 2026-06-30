@@ -3,8 +3,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Save, RefreshCw, Check } from 'lucide-react';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
-import { updateFileContent } from '@/redux/features/file-system-slice';
-import { closeApp } from '@/redux/features/all-apps-slice';
+import {
+  updateFileContent,
+  createFile,
+} from '@/redux/features/file-system-slice';
+import { closeApp, openAppWithPath } from '@/redux/features/all-apps-slice';
 
 interface TextEditorProps {
   id: string;
@@ -32,6 +35,9 @@ const TextEditor = ({ id }: TextEditorProps) => {
     if (node && node.type === 'file') {
       setEditorContent(node.content || '');
       setIsSaved(true);
+    } else if (!activePath) {
+      setEditorContent('');
+      setIsSaved(true);
     }
   }, [activePath, node]);
 
@@ -46,6 +52,51 @@ const TextEditor = ({ id }: TextEditorProps) => {
       setIsSaved(true);
       setShowSaveToast(true);
       setTimeout(() => setShowSaveToast(false), 2000);
+    } else {
+      let fileNameInput = prompt(
+        'Enter file name to save to Desktop:',
+        'untitled.txt',
+      );
+      if (fileNameInput === null) return; // User cancelled
+
+      let name = fileNameInput.trim();
+      if (!name) {
+        alert('File name cannot be empty.');
+        return;
+      }
+
+      if (!name.includes('.')) {
+        name += '.txt';
+      }
+
+      const desktopPath = '/home/daniel235/Desktop';
+      const fullPath = `${desktopPath}/${name}`;
+
+      if (fileSystem[fullPath]) {
+        alert('A file with that name already exists on the Desktop.');
+        return;
+      }
+
+      // Create file in file system
+      dispatch(
+        createFile({
+          path: desktopPath,
+          name,
+          content: editorContent,
+        }),
+      );
+
+      // Associate this editor with the new file path
+      dispatch(
+        openAppWithPath({
+          slug: 'text-editor',
+          path: fullPath,
+        }),
+      );
+
+      setIsSaved(true);
+      setShowSaveToast(true);
+      setTimeout(() => setShowSaveToast(false), 2000);
     }
   };
 
@@ -53,7 +104,7 @@ const TextEditor = ({ id }: TextEditorProps) => {
     dispatch(closeApp(id));
   };
 
-  if (!node || node.type !== 'file') {
+  if (activePath && (!node || node.type !== 'file')) {
     return (
       <div className="flex h-full w-full items-center justify-center bg-zinc-900 text-sm text-zinc-500">
         No text file loaded
@@ -67,7 +118,7 @@ const TextEditor = ({ id }: TextEditorProps) => {
       <div className="flex select-none items-center justify-between border-b border-zinc-800 bg-zinc-950 px-3 py-1.5 font-sans text-xs text-zinc-300">
         <div className="flex items-center gap-1.5">
           <span className="max-w-[200px] truncate font-semibold sm:max-w-xs">
-            {node.name}
+            {node ? node.name : 'Untitled Document'}
           </span>
           {!isSaved && (
             <span
