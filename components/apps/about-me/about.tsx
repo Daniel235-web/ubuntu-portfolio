@@ -46,7 +46,7 @@ const About = () => {
             Hi, I&apos;m <span className="text-orange-500">Emmanuel</span> 👋
           </h1>
           <p className="mt-1 text-lg font-medium text-zinc-400">
-            Full Stack & Blockchain Engineer
+            Full Stack Engineer
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-2 md:justify-start">
             <span className="rounded-full border border-zinc-700 bg-zinc-800 px-2.5 py-1 text-xs text-zinc-300">
@@ -66,7 +66,7 @@ const About = () => {
       <div className="space-y-4 text-sm leading-relaxed text-zinc-300 md:text-base">
         <p>
           I am a specialized software engineer dedicated to building
-          high-performance, decentralised, and user-centric web applications. My
+          high-performance, decentralised"(web3)", and user-centric web applications"(web2)". My
           core expertise spans the modern web ecosystem and smart contract
           development across Ethereum, Polkadot, and Polygon ecosystems.
         </p>
