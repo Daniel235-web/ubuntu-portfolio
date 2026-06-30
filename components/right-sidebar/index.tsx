@@ -10,10 +10,12 @@ interface RightSidebarProps {}
 
 const RightSidebar = ({}: RightSidebarProps) => {
   const dispatch = useAppDispatch();
-  const favoriteApps = useAppSelector((state) => state.allApps);
+  const favoriteApps = useAppSelector((state) =>
+    state.allApps.filter((app) => app.isFavorite || app.isOpen),
+  );
 
   return (
-    <div className="absolute right-0 top-0 z-40 hidden h-full w-auto transform select-none flex-col items-center justify-start pt-7 duration-300 md:flex lg:flex">
+    <div className="scrollbar-none absolute right-0 top-0 z-40 hidden h-full w-auto transform select-none flex-col items-center justify-start overflow-y-auto pb-4 pt-7 duration-300 md:flex lg:flex">
       {favoriteApps.map((item) => (
         <Tooltip text={item.title} key={item.id} position="left">
           <div
