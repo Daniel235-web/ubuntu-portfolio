@@ -37,7 +37,8 @@ const Desktop = ({}: DesktopProps) => {
     y: number;
   } | null>(null);
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
-  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState<boolean>(false);
+  const [isPasswordModalOpen, setIsPasswordModalOpen] =
+    useState<boolean>(false);
   const [pendingFiles, setPendingFiles] = useState<File[]>([]);
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
