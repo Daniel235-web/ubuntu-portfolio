@@ -69,7 +69,8 @@ const Files = ({ id }: FilesProps) => {
     );
     if (hasImage) {
       const password = prompt('Enter owner password to upload images:');
-      if (password !== 'ubuntu' && password !== 'daniel235') {
+      const correctPassword = process.env.NEXT_PUBLIC_OWNER_PASSWORD;
+      if (password !== correctPassword) {
         alert('Incorrect password. Image upload denied.');
         if (fileInputRef.current) {
           fileInputRef.current.value = '';
