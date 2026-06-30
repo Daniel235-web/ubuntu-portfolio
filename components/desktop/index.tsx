@@ -14,6 +14,7 @@ import { BackgroundImage } from '@/components/background-image';
 import { Sidebar } from '@/components/sidebar';
 import { ContextMenu } from './context-menu';
 import { AppsDrawer } from './apps-drawer';
+import { PasswordModal } from './password-modal';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import {
   createFile,
@@ -36,30 +37,13 @@ const Desktop = ({}: DesktopProps) => {
     y: number;
   } | null>(null);
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState<boolean>(false);
+  const [pendingFiles, setPendingFiles] = useState<File[]>([]);
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (!files) return;
-
-    // Check if any file is an image and prompt for password
-    const hasImage = Array.from(files).some((file) =>
-      file.type.startsWith('image/'),
-    );
-    if (hasImage) {
-      const password = prompt('Enter owner password to upload images:');
-      const correctPassword = process.env.NEXT_PUBLIC_OWNER_PASSWORD;
-      if (password !== correctPassword) {
-        alert('Incorrect password. Image upload denied.');
-        if (fileInputRef.current) {
-          fileInputRef.current.value = '';
-        }
-        return;
-      }
-    }
-
-    Array.from(files).forEach((file) => {
+  const processFiles = (filesList: File[]) => {
+    filesList.forEach((file) => {
       const isImage = file.type.startsWith('image/');
       const reader = new FileReader();
 
@@ -84,6 +68,35 @@ const Desktop = ({}: DesktopProps) => {
       }
     });
 
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files) return;
+
+    const filesArray = Array.from(files);
+    const hasImage = filesArray.some((file) => file.type.startsWith('image/'));
+
+    if (hasImage) {
+      setPendingFiles(filesArray);
+      setIsPasswordModalOpen(true);
+    } else {
+      processFiles(filesArray);
+    }
+  };
+
+  const handlePasswordSuccess = () => {
+    processFiles(pendingFiles);
+    setPendingFiles([]);
+    setIsPasswordModalOpen(false);
+  };
+
+  const handlePasswordClose = () => {
+    setPendingFiles([]);
+    setIsPasswordModalOpen(false);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -273,6 +286,13 @@ const Desktop = ({}: DesktopProps) => {
       )}
       {/* Applications Drawer */}
       <AppsDrawer />
+
+      {/* Password Verification Modal */}
+      <PasswordModal
+        isOpen={isPasswordModalOpen}
+        onClose={handlePasswordClose}
+        onSuccess={handlePasswordSuccess}
+      />
     </div>
   );
 };

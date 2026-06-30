@@ -73,28 +73,34 @@ const Window = ({ id, title, children, zIndex }: WindowProps) => {
         className={cls(
           'absolute flex flex-col bg-zinc-800 shadow-lg',
           isDragging ? '' : 'transition-all duration-300 ease-out',
-          (isMobile || app?.maximized) ? 'rounded-none' : 'rounded-lg left-20 top-10',
+          isMobile || app?.maximized
+            ? 'rounded-none'
+            : 'left-20 top-10 rounded-lg',
           'overflow-hidden',
           isMobile
-            ? 'w-full h-full'
-            : (app?.maximized
-              ? 'w-full h-full'
-              : (app?.slug === 'calculator'
-                ? 'h-3/4 w-3/4 md:h-2/4 md:w-1/4'
-                : 'h-3/4 w-3/4')),
+            ? 'h-full w-full'
+            : app?.maximized
+            ? 'h-full w-full'
+            : app?.slug === 'calculator'
+            ? 'h-3/4 w-3/4 md:h-2/4 md:w-1/4'
+            : 'h-3/4 w-3/4',
         )}
         style={{
-          top: isMobile ? '32px' : (app?.maximized ? '32px' : ''),
-          left: isMobile ? '0px' : (app?.maximized ? '58px' : ''),
-          right: (isMobile || app?.maximized) ? '0px' : '',
-          bottom: isMobile ? '50px' : (app?.maximized ? '0px' : ''),
-          overflow: (isMobile || app?.maximized) ? 'hidden' : '',
+          top: isMobile ? '32px' : app?.maximized ? '32px' : '',
+          left: isMobile ? '0px' : app?.maximized ? '58px' : '',
+          right: isMobile || app?.maximized ? '0px' : '',
+          bottom: isMobile ? '50px' : app?.maximized ? '0px' : '',
+          overflow: isMobile || app?.maximized ? 'hidden' : '',
           width: isMobile
             ? '100vw'
-            : (app?.maximized ? 'calc(100vw - 58px)' : ''),
+            : app?.maximized
+            ? 'calc(100vw - 58px)'
+            : '',
           height: isMobile
             ? 'calc(100vh - 32px - 50px)'
-            : (app?.maximized ? 'calc(100vh - 32px)' : ''),
+            : app?.maximized
+            ? 'calc(100vh - 32px)'
+            : '',
           zIndex: app?.zIndex,
         }}
         onClick={(e) => {
@@ -104,7 +110,7 @@ const Window = ({ id, title, children, zIndex }: WindowProps) => {
         <Navbar
           title={title}
           id={id}
-          className={(isMobile || app?.maximized) ? '' : 'handle'}
+          className={isMobile || app?.maximized ? '' : 'handle'}
         />
         <div className="flex-grow overflow-auto">{children}</div>
       </div>

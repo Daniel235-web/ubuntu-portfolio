@@ -30,6 +30,7 @@ import {
 } from '@/redux/features/file-system-slice';
 import { openAppWithPath } from '@/redux/features/all-apps-slice';
 import useOutsideClickHandler from '@/hooks/use-outside-click-handler';
+import { PasswordModal } from '@/components/desktop/password-modal';
 
 interface FilesProps {
   id: string;
@@ -59,27 +60,11 @@ const Files = ({ id }: FilesProps) => {
   const contextMenuRef = useRef<HTMLDivElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (!files) return;
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState<boolean>(false);
+  const [pendingFiles, setPendingFiles] = useState<File[]>([]);
 
-    // Check if any file is an image and prompt for password
-    const hasImage = Array.from(files).some((file) =>
-      file.type.startsWith('image/'),
-    );
-    if (hasImage) {
-      const password = prompt('Enter owner password to upload images:');
-      const correctPassword = process.env.NEXT_PUBLIC_OWNER_PASSWORD;
-      if (password !== correctPassword) {
-        alert('Incorrect password. Image upload denied.');
-        if (fileInputRef.current) {
-          fileInputRef.current.value = '';
-        }
-        return;
-      }
-    }
-
-    Array.from(files).forEach((file) => {
+  const processFiles = (filesList: File[]) => {
+    filesList.forEach((file) => {
       const isImage = file.type.startsWith('image/');
       const reader = new FileReader();
 
@@ -104,6 +89,35 @@ const Files = ({ id }: FilesProps) => {
       }
     });
 
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files) return;
+
+    const filesArray = Array.from(files);
+    const hasImage = filesArray.some((file) => file.type.startsWith('image/'));
+
+    if (hasImage) {
+      setPendingFiles(filesArray);
+      setIsPasswordModalOpen(true);
+    } else {
+      processFiles(filesArray);
+    }
+  };
+
+  const handlePasswordSuccess = () => {
+    processFiles(pendingFiles);
+    setPendingFiles([]);
+    setIsPasswordModalOpen(false);
+  };
+
+  const handlePasswordClose = () => {
+    setPendingFiles([]);
+    setIsPasswordModalOpen(false);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -329,7 +343,7 @@ const Files = ({ id }: FilesProps) => {
   return (
     <div className="flex h-full w-full select-none bg-zinc-900 font-sans text-zinc-100">
       {/* Sidebar navigation */}
-      <div className="hidden md:flex w-1/4 min-w-[150px] flex-col gap-1 border-r border-zinc-800 bg-zinc-950 p-2">
+      <div className="hidden w-1/4 min-w-[150px] flex-col gap-1 border-r border-zinc-800 bg-zinc-950 p-2 md:flex">
         <div className="px-2 py-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500">
           Places
         </div>
@@ -415,7 +429,7 @@ const Files = ({ id }: FilesProps) => {
           {/* Upload Button */}
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="flex items-center gap-1 rounded bg-orange-600 px-2 py-1 text-[10px] sm:text-xs font-semibold text-white transition hover:bg-orange-500"
+            className="flex items-center gap-1 rounded bg-orange-600 px-2 py-1 text-[10px] font-semibold text-white transition hover:bg-orange-500 sm:text-xs"
           >
             <Upload className="h-3.5 w-3.5" />
             <span className="hidden sm:inline">Upload</span>
@@ -586,6 +600,13 @@ const Files = ({ id }: FilesProps) => {
           </div>
         )}
       </div>
+
+      {/* Password Verification Modal */}
+      <PasswordModal
+        isOpen={isPasswordModalOpen}
+        onClose={handlePasswordClose}
+        onSuccess={handlePasswordSuccess}
+      />
     </div>
   );
 };
