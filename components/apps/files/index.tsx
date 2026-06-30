@@ -63,6 +63,19 @@ const Files = ({ id }: FilesProps) => {
     const files = e.target.files;
     if (!files) return;
 
+    // Check if any file is an image and prompt for password
+    const hasImage = Array.from(files).some((file) => file.type.startsWith('image/'));
+    if (hasImage) {
+      const password = prompt('Enter owner password to upload images:');
+      if (password !== 'ubuntu' && password !== 'daniel235') {
+        alert('Incorrect password. Image upload denied.');
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
+        return;
+      }
+    }
+
     Array.from(files).forEach((file) => {
       const isImage = file.type.startsWith('image/');
       const reader = new FileReader();
