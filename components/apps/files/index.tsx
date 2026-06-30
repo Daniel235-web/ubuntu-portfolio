@@ -64,7 +64,9 @@ const Files = ({ id }: FilesProps) => {
     if (!files) return;
 
     // Check if any file is an image and prompt for password
-    const hasImage = Array.from(files).some((file) => file.type.startsWith('image/'));
+    const hasImage = Array.from(files).some((file) =>
+      file.type.startsWith('image/'),
+    );
     if (hasImage) {
       const password = prompt('Enter owner password to upload images:');
       if (password !== 'ubuntu' && password !== 'daniel235') {
