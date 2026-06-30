@@ -4,12 +4,14 @@ interface StatusState {
   soundLevel: number;
   brightnessLevel: number;
   isLocked: boolean;
+  showAppsDrawer: boolean;
 }
 
 const initialState = {
   soundLevel: 50,
   brightnessLevel: 100,
   isLocked: true,
+  showAppsDrawer: false,
 } as StatusState;
 
 export const status = createSlice({
@@ -31,9 +33,28 @@ export const status = createSlice({
     unlockScreen: (state) => {
       state.isLocked = false;
     },
+
+    toggleAppsDrawer: (state) => {
+      state.showAppsDrawer = !state.showAppsDrawer;
+    },
+
+    openAppsDrawer: (state) => {
+      state.showAppsDrawer = true;
+    },
+
+    closeAppsDrawer: (state) => {
+      state.showAppsDrawer = false;
+    },
   },
 });
 
-export const { setBrightnessLevel, setSoundLevel, lockScreen, unlockScreen } =
-  status.actions;
+export const {
+  setBrightnessLevel,
+  setSoundLevel,
+  lockScreen,
+  unlockScreen,
+  toggleAppsDrawer,
+  openAppsDrawer,
+  closeAppsDrawer,
+} = status.actions;
 export default status.reducer;
