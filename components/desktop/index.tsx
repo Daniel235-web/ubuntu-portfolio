@@ -13,6 +13,7 @@ import cls from 'classnames';
 import { BackgroundImage } from '@/components/background-image';
 import { Sidebar } from '@/components/sidebar';
 import { ContextMenu } from './context-menu';
+import { AppsDrawer } from './apps-drawer';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import {
   createFile,
@@ -270,6 +271,8 @@ const Desktop = ({}: DesktopProps) => {
           onUploadFile={() => fileInputRef.current?.click()}
         />
       )}
+      {/* Applications Drawer */}
+      <AppsDrawer />
     </div>
   );
 };
