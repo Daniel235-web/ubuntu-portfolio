@@ -15,7 +15,7 @@ const Sidebar = ({}: SidebarProps) => {
   const showAppsDrawer = useAppSelector((state) => state.status.showAppsDrawer);
 
   return (
-    <div className="absolute left-0 top-0 z-40 flex h-full w-auto transform select-none flex-col items-center justify-start border-black border-opacity-30 bg-black bg-opacity-20 pt-7 duration-300">
+    <div className="absolute bottom-0 left-0 z-40 flex h-[50px] w-full select-none flex-row items-center justify-center border-t border-black/20 bg-zinc-950/95 backdrop-blur-md px-4 duration-300 md:bottom-auto md:top-0 md:h-full md:w-auto md:flex-col md:justify-start md:border-r md:border-t-0 md:bg-black md:bg-opacity-20 md:pt-7 md:backdrop-blur-none">
       {favoriteApps.map((item) => (
         <Tooltip text={item.title} key={item.id} position="right">
           <SidebarMenuItem
