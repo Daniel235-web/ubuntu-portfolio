@@ -60,7 +60,8 @@ const Files = ({ id }: FilesProps) => {
   const contextMenuRef = useRef<HTMLDivElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState<boolean>(false);
+  const [isPasswordModalOpen, setIsPasswordModalOpen] =
+    useState<boolean>(false);
   const [pendingFiles, setPendingFiles] = useState<File[]>([]);
 
   const processFiles = (filesList: File[]) => {
