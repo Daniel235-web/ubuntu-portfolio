@@ -10,7 +10,7 @@ const AppsDrawer = () => {
   const dispatch = useAppDispatch();
   const apps = useAppSelector((state) => state.allApps);
   const showAppsDrawer = useAppSelector((state) => state.status.showAppsDrawer);
-  
+
   const [searchQuery, setSearchQuery] = useState('');
   const searchInputRef = useRef<HTMLInputElement | null>(null);
 
