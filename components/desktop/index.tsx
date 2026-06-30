@@ -12,7 +12,6 @@ import cls from 'classnames';
 
 import { BackgroundImage } from '@/components/background-image';
 import { Sidebar } from '@/components/sidebar';
-import { RightSidebar } from '@/components/right-sidebar';
 import { ContextMenu } from './context-menu';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import {
@@ -42,6 +41,21 @@ const Desktop = ({}: DesktopProps) => {
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files) return;
+
+    // Check if any file is an image and prompt for password
+    const hasImage = Array.from(files).some((file) =>
+      file.type.startsWith('image/'),
+    );
+    if (hasImage) {
+      const password = prompt('Enter owner password to upload images:');
+      if (password !== 'ubuntu' && password !== 'daniel235') {
+        alert('Incorrect password. Image upload denied.');
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
+        return;
+      }
+    }
 
     Array.from(files).forEach((file) => {
       const isImage = file.type.startsWith('image/');
@@ -193,9 +207,9 @@ const Desktop = ({}: DesktopProps) => {
         multiple
       />
 
-      {/* Desktop items layout (clean vertical column next to the launcher dock) */}
+      {/* Desktop items layout (clean vertical column on the right side) */}
       <div
-        className="absolute left-[70px] top-[45px] z-30 flex flex-col items-start justify-start gap-4 p-2"
+        className="absolute right-6 top-[50px] z-30 flex flex-col items-center justify-start gap-4 p-2"
         onClick={(e) => e.stopPropagation()}
       >
         {desktopItems.map(({ path, node }) => {
@@ -241,9 +255,6 @@ const Desktop = ({}: DesktopProps) => {
           );
         })}
       </div>
-
-      {/* Right Sidebar desktop shortcuts */}
-      <RightSidebar />
 
       {/* Custom Context Menu */}
       {contextMenu && (
