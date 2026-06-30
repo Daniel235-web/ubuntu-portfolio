@@ -9,6 +9,10 @@ import {
   Spotify,
   AboutMe,
   Calculator,
+  Files,
+  Settings,
+  ImageViewer,
+  TextEditor,
 } from '@/components/apps';
 
 interface AllAppsState {
@@ -26,11 +30,12 @@ interface AllAppsState {
   maximized: boolean;
   slug: string;
   zIndex: number;
+  activePath?: string;
 }
 
 const initialState: AllAppsState[] = [
   {
-    id: _.uniqueId(),
+    id: 'app-about-me',
     title: 'About Me',
     slug: 'about-me',
     imageSrc: '/myImage.jpeg',
@@ -39,14 +44,30 @@ const initialState: AllAppsState[] = [
     app: AboutMe,
     isMinimized: false,
     position: {
-      x: 0,
-      y: 0,
+      x: 20,
+      y: 20,
+    },
+    maximized: false,
+    zIndex: 1,
+  },
+  {
+    id: 'app-files',
+    title: 'Files',
+    slug: 'files',
+    imageSrc: '/apps/user-home.png',
+    isFavorite: true,
+    isOpen: false,
+    app: Files,
+    isMinimized: false,
+    position: {
+      x: 40,
+      y: 40,
     },
     maximized: false,
     zIndex: 0,
   },
   {
-    id: _.uniqueId(),
+    id: 'app-chrome',
     title: 'Chrome',
     slug: 'chrome',
     imageSrc: '/apps/chrome.png',
@@ -55,14 +76,14 @@ const initialState: AllAppsState[] = [
     app: Chrome,
     isMinimized: false,
     position: {
-      x: 0,
-      y: 0,
+      x: 60,
+      y: 60,
     },
     maximized: false,
     zIndex: 0,
   },
   {
-    id: _.uniqueId(),
+    id: 'app-calculator',
     title: 'Calculator',
     slug: 'calculator',
     imageSrc: '/apps/calc.png',
@@ -71,14 +92,14 @@ const initialState: AllAppsState[] = [
     app: Calculator,
     isMinimized: false,
     position: {
-      x: 0,
-      y: 0,
+      x: 80,
+      y: 80,
     },
     maximized: false,
     zIndex: 0,
   },
   {
-    id: _.uniqueId(),
+    id: 'app-vscode',
     title: 'VS Code',
     slug: 'code',
     imageSrc: '/apps/vscode.png',
@@ -87,14 +108,14 @@ const initialState: AllAppsState[] = [
     app: VSCode,
     isMinimized: false,
     position: {
-      x: 0,
-      y: 0,
+      x: 100,
+      y: 100,
     },
     maximized: false,
     zIndex: 0,
   },
   {
-    id: _.uniqueId(),
+    id: 'app-terminal',
     title: 'Terminal',
     slug: 'terminal',
     imageSrc: '/apps/bash.png',
@@ -103,14 +124,14 @@ const initialState: AllAppsState[] = [
     app: Terminal,
     isMinimized: false,
     position: {
-      x: 0,
-      y: 0,
+      x: 120,
+      y: 120,
     },
     maximized: false,
     zIndex: 0,
   },
   {
-    id: _.uniqueId(),
+    id: 'app-spotify',
     title: 'Spotify',
     slug: 'spotify',
     imageSrc: '/apps/spotify.png',
@@ -119,24 +140,56 @@ const initialState: AllAppsState[] = [
     app: Spotify,
     isMinimized: false,
     position: {
-      x: 0,
-      y: 0,
+      x: 140,
+      y: 140,
     },
     maximized: false,
     zIndex: 0,
   },
   {
-    id: _.uniqueId(),
+    id: 'app-settings',
     title: 'Settings',
     slug: 'settings',
     imageSrc: '/apps/gnome-control-center.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome,
+    app: Settings,
     isMinimized: false,
     position: {
-      x: 0,
-      y: 0,
+      x: 160,
+      y: 160,
+    },
+    maximized: false,
+    zIndex: 0,
+  },
+  {
+    id: 'app-image-viewer',
+    title: 'Image Viewer',
+    slug: 'image-viewer',
+    imageSrc: '/about-me/projects.svg',
+    isFavorite: false,
+    isOpen: false,
+    app: ImageViewer,
+    isMinimized: false,
+    position: {
+      x: 180,
+      y: 80,
+    },
+    maximized: false,
+    zIndex: 0,
+  },
+  {
+    id: 'app-text-editor',
+    title: 'Text Editor',
+    slug: 'text-editor',
+    imageSrc: '/apps/gedit.png',
+    isFavorite: false,
+    isOpen: false,
+    app: TextEditor,
+    isMinimized: false,
+    position: {
+      x: 200,
+      y: 100,
     },
     maximized: false,
     zIndex: 0,
@@ -148,12 +201,7 @@ export const appApps = createSlice({
   initialState,
   reducers: {
     openApp: (state, action: PayloadAction<string>) => {
-      // Close all apps first
-      state.forEach((app) => {
-        app.isOpen = false;
-      });
-
-      // Then open the selected app
+      // NOTE: Multi-window concurrent environment enabled by removing "close all" loop.
       const findApp = state.find((app) => app.id === action.payload);
       if (findApp) {
         findApp.isOpen = true;
@@ -170,6 +218,31 @@ export const appApps = createSlice({
       if (findApp) {
         findApp.isOpen = true;
         findApp.isMinimized = false;
+
+        // Focus window
+        const zIndexes = state
+          .filter((app) => app.isOpen && !app.isMinimized)
+          .map((app) => app.zIndex);
+        const maxZIndex = max(zIndexes) || 0;
+        findApp.zIndex = maxZIndex + 1;
+      }
+    },
+    openAppWithPath: (
+      state,
+      action: PayloadAction<{ slug: string; path: string }>,
+    ) => {
+      const findApp = state.find((app) => app.slug === action.payload.slug);
+      if (findApp) {
+        findApp.isOpen = true;
+        findApp.isMinimized = false;
+        findApp.activePath = action.payload.path;
+
+        // Focus window
+        const zIndexes = state
+          .filter((app) => app.isOpen && !app.isMinimized)
+          .map((app) => app.zIndex);
+        const maxZIndex = max(zIndexes) || 0;
+        findApp.zIndex = maxZIndex + 1;
       }
     },
     closeApp: (state, action: PayloadAction<string>) => {
@@ -178,10 +251,11 @@ export const appApps = createSlice({
         appToClose.isOpen = false;
         appToClose.maximized = false;
         appToClose.position = {
-          x: 0,
-          y: 0,
+          x: 40,
+          y: 40,
         };
         appToClose.zIndex = 0;
+        appToClose.activePath = undefined;
       }
     },
     minimizeApp: (state, action: PayloadAction<string>) => {
@@ -225,6 +299,7 @@ export const {
   changePosition,
   maximizeApp,
   openAppByTitle,
+  openAppWithPath,
   zIndexApp,
 } = appApps.actions;
 export default appApps.reducer;
