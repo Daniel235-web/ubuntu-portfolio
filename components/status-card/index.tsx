@@ -15,7 +15,9 @@ import { Slider } from '@/components/slider';
 import {
   setBrightnessLevel,
   setSoundLevel,
+  lockScreen,
 } from '@/redux/features/status-slice';
+import { openAppByTitle } from '@/redux/features/all-apps-slice';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 interface StatusCardProps {}
@@ -70,11 +72,17 @@ const StatusCard = ({}: StatusCardProps) => {
         </Accordion>
       </div>
       <hr className="my-2 h-px border-0 bg-gray-700" />
-      <div className="flex items-center gap-2 rounded-sm p-2 hover:bg-slate-800">
+      <div
+        className="flex cursor-pointer items-center gap-2 rounded-sm p-2 hover:bg-slate-800"
+        onClick={() => dispatch(openAppByTitle('settings'))}
+      >
         <Settings />
         Settings
       </div>
-      <div className="flex items-center gap-2 rounded-sm p-2 hover:bg-slate-800">
+      <div
+        className="flex cursor-pointer items-center gap-2 rounded-sm p-2 hover:bg-slate-800"
+        onClick={() => dispatch(lockScreen())}
+      >
         <Lock />
         Lock
       </div>
