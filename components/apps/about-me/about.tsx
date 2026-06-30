@@ -66,9 +66,10 @@ const About = () => {
       <div className="space-y-4 text-sm leading-relaxed text-zinc-300 md:text-base">
         <p>
           I am a specialized software engineer dedicated to building
-          high-performance, decentralised"(web3)", and user-centric web applications"(web2)". My
-          core expertise spans the modern web ecosystem and smart contract
-          development across Ethereum, Polkadot, and Polygon ecosystems.
+          high-performance, decentralised (web3), and user-centric web
+          applications (web2). My core expertise spans the modern web ecosystem
+          and smart contract development across Ethereum, Polkadot, and Polygon
+          ecosystems.
         </p>
         <p>
           I focus on writing clean, maintainable code, implementing robust
