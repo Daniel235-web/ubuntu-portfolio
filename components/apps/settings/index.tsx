@@ -34,6 +34,8 @@ const Settings = ({ id }: SettingsProps) => {
     { name: 'Noble Numbat', path: '/images/wall-6.webp' },
     { name: 'Oracular Oriole', path: '/images/wall-7.webp' },
     { name: 'Plucky Puffin', path: '/images/wall-8.webp' },
+    { name: 'Developer Setup 1', path: '/images/setup-1.jpg' },
+    { name: 'Developer Setup 2', path: '/images/setup-2.jpg' },
   ];
 
   return (

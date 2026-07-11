@@ -60,9 +60,7 @@ const Files = ({ id }: FilesProps) => {
   const contextMenuRef = useRef<HTMLDivElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const [isPasswordModalOpen, setIsPasswordModalOpen] =
-    useState<boolean>(false);
-  const [pendingFiles, setPendingFiles] = useState<File[]>([]);
+
 
   const processFiles = (filesList: File[]) => {
     filesList.forEach((file) => {
@@ -100,28 +98,7 @@ const Files = ({ id }: FilesProps) => {
     if (!files) return;
 
     const filesArray = Array.from(files);
-    const hasImage = filesArray.some((file) => file.type.startsWith('image/'));
-
-    if (hasImage) {
-      setPendingFiles(filesArray);
-      setIsPasswordModalOpen(true);
-    } else {
-      processFiles(filesArray);
-    }
-  };
-
-  const handlePasswordSuccess = () => {
-    processFiles(pendingFiles);
-    setPendingFiles([]);
-    setIsPasswordModalOpen(false);
-  };
-
-  const handlePasswordClose = () => {
-    setPendingFiles([]);
-    setIsPasswordModalOpen(false);
-    if (fileInputRef.current) {
-      fileInputRef.current.value = '';
-    }
+    processFiles(filesArray);
   };
 
   useOutsideClickHandler(contextMenuRef, () => {
@@ -602,12 +579,7 @@ const Files = ({ id }: FilesProps) => {
         )}
       </div>
 
-      {/* Password Verification Modal */}
-      <PasswordModal
-        isOpen={isPasswordModalOpen}
-        onClose={handlePasswordClose}
-        onSuccess={handlePasswordSuccess}
-      />
+
     </div>
   );
 };

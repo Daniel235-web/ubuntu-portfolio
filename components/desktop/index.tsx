@@ -37,9 +37,7 @@ const Desktop = ({}: DesktopProps) => {
     y: number;
   } | null>(null);
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
-  const [isPasswordModalOpen, setIsPasswordModalOpen] =
-    useState<boolean>(false);
-  const [pendingFiles, setPendingFiles] = useState<File[]>([]);
+
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
@@ -79,28 +77,7 @@ const Desktop = ({}: DesktopProps) => {
     if (!files) return;
 
     const filesArray = Array.from(files);
-    const hasImage = filesArray.some((file) => file.type.startsWith('image/'));
-
-    if (hasImage) {
-      setPendingFiles(filesArray);
-      setIsPasswordModalOpen(true);
-    } else {
-      processFiles(filesArray);
-    }
-  };
-
-  const handlePasswordSuccess = () => {
-    processFiles(pendingFiles);
-    setPendingFiles([]);
-    setIsPasswordModalOpen(false);
-  };
-
-  const handlePasswordClose = () => {
-    setPendingFiles([]);
-    setIsPasswordModalOpen(false);
-    if (fileInputRef.current) {
-      fileInputRef.current.value = '';
-    }
+    processFiles(filesArray);
   };
 
   // Desktop paths: direct children of /home/daniel235/Desktop
@@ -288,12 +265,7 @@ const Desktop = ({}: DesktopProps) => {
       {/* Applications Drawer */}
       <AppsDrawer />
 
-      {/* Password Verification Modal */}
-      <PasswordModal
-        isOpen={isPasswordModalOpen}
-        onClose={handlePasswordClose}
-        onSuccess={handlePasswordSuccess}
-      />
+
     </div>
   );
 };

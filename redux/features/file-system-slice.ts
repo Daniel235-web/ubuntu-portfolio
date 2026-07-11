@@ -114,6 +114,16 @@ LinkedIn: https://linkedin.com/in/samuel-emmanuel`,
     type: 'file',
     imageSrc: '/images/wall-5.webp',
   },
+  '/home/daniel235/Pictures/setup-1.jpg': {
+    name: 'setup-1.jpg',
+    type: 'file',
+    imageSrc: '/images/setup-1.jpg',
+  },
+  '/home/daniel235/Pictures/setup-2.jpg': {
+    name: 'setup-2.jpg',
+    type: 'file',
+    imageSrc: '/images/setup-2.jpg',
+  },
   '/home/daniel235/Pictures/screenshot.png': {
     name: 'screenshot.png',
     type: 'file',
