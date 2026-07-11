@@ -60,8 +60,6 @@ const Files = ({ id }: FilesProps) => {
   const contextMenuRef = useRef<HTMLDivElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-
-
   const processFiles = (filesList: File[]) => {
     filesList.forEach((file) => {
       const isImage = file.type.startsWith('image/');
@@ -578,8 +576,6 @@ const Files = ({ id }: FilesProps) => {
           </div>
         )}
       </div>
-
-
     </div>
   );
 };

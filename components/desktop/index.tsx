@@ -38,7 +38,6 @@ const Desktop = ({}: DesktopProps) => {
   } | null>(null);
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
 
-
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const processFiles = (filesList: File[]) => {
@@ -264,8 +263,6 @@ const Desktop = ({}: DesktopProps) => {
       )}
       {/* Applications Drawer */}
       <AppsDrawer />
-
-
     </div>
   );
 };

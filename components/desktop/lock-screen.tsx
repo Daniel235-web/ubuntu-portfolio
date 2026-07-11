@@ -55,7 +55,7 @@ const LockScreen = () => {
 
   return (
     <div
-      className="absolute inset-0 z-[100] flex h-screen w-screen flex-col justify-between overflow-hidden font-sans text-white cursor-pointer select-none"
+      className="absolute inset-0 z-[100] flex h-screen w-screen cursor-pointer select-none flex-col justify-between overflow-hidden font-sans text-white"
       onClick={handleUnlock}
     >
       {/* Wallpaper Background */}
@@ -90,7 +90,7 @@ const LockScreen = () => {
             {dateStr}
           </p>
           {/* Unlock Hint */}
-          <p className="mt-20 animate-pulse rounded-full bg-black bg-opacity-25 px-5 py-2.5 text-xs text-zinc-300 backdrop-blur-md border border-zinc-800">
+          <p className="mt-20 animate-pulse rounded-full border border-zinc-800 bg-black bg-opacity-25 px-5 py-2.5 text-xs text-zinc-300 backdrop-blur-md">
             Click anywhere or press any key to enter
           </p>
         </div>
