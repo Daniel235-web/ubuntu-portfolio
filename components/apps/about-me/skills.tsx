@@ -1,7 +1,12 @@
 import cls from 'classnames';
 import { Rocket, Zap, Code, Sparkles, Server, Cloud } from 'lucide-react';
 
-import { frontend, backend, infrastructureCloud, web3Skills } from '@/data/skills';
+import {
+  frontend,
+  backend,
+  infrastructureCloud,
+  web3Skills,
+} from '@/data/skills';
 
 interface SectionProps {
   title: string;
@@ -15,7 +20,7 @@ const Section = ({ title, gradientFrom, gradientTo, items }: SectionProps) => {
     <div className="flex flex-col items-center">
       <div
         className={cls(
-          'mb-3 text-lg font-extrabold text-transparent text-center',
+          'mb-3 text-center text-lg font-extrabold text-transparent',
           `bg-gradient-to-r from-[${gradientFrom}] to-[${gradientTo}] bg-clip-text`,
         )}
       >
@@ -47,33 +52,61 @@ const Skills = () => {
         <div className="space-y-3 text-sm leading-relaxed text-zinc-300">
           <ul className="space-y-3">
             <li className="flex items-start gap-2">
-              <Server className="h-5 w-5 mt-0.5 text-orange-500 shrink-0" />
+              <Server className="mt-0.5 h-5 w-5 shrink-0 text-orange-500" />
               <div>
-                <strong>Physical Server Infrastructure & Racking:</strong> Hands-on physical server installation, OS provisioning, networking setup, and hardware deployment for enterprise agencies (<span className="text-orange-400 font-semibold">NIMC</span> & <span className="text-orange-400 font-semibold">NELFUND</span>).
+                <strong>Physical Server Infrastructure & Racking:</strong>{' '}
+                Hands-on physical server installation, OS provisioning,
+                networking setup, and hardware deployment for enterprise
+                agencies (
+                <span className="font-semibold text-orange-400">NIMC</span> &{' '}
+                <span className="font-semibold text-orange-400">NELFUND</span>).
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <Cloud className="h-5 w-5 mt-0.5 text-teal-400 shrink-0" />
+              <Cloud className="mt-0.5 h-5 w-5 shrink-0 text-teal-400" />
               <div>
-                <strong>AWS Cloud Architecture:</strong> Designing scalable cloud backend systems with <span className="text-teal-400 font-semibold">AWS EC2, S3, RDS, CloudFront & VPCs</span> for institutional platforms (<span className="text-teal-400 font-semibold">University of Ibadan</span>).
+                <strong>AWS Cloud Architecture:</strong> Designing scalable
+                cloud backend systems with{' '}
+                <span className="font-semibold text-teal-400">
+                  AWS EC2, S3, RDS, CloudFront & VPCs
+                </span>{' '}
+                for institutional platforms (
+                <span className="font-semibold text-teal-400">
+                  University of Ibadan
+                </span>
+                ).
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <Code className="h-5 w-5 mt-0.5 text-yellow-400 shrink-0" />
+              <Code className="mt-0.5 h-5 w-5 shrink-0 text-yellow-400" />
               <div>
-                <strong>Web2 Full Stack Engineering:</strong> Building scalable software applications at eSupport NG Ltd using <span className="text-yellow-400 font-semibold">Golang, Nuxt.js, Vue.js, React/Next.js, Python/Django, Node.js, PostgreSQL</span>, and <span className="text-yellow-400 font-semibold">MySQL</span>.
+                <strong>Web2 Full Stack Engineering:</strong> Building scalable
+                software applications at eSupport NG Ltd using{' '}
+                <span className="font-semibold text-yellow-400">
+                  Golang, Nuxt.js, Vue.js, React/Next.js, Python/Django,
+                  Node.js, PostgreSQL
+                </span>
+                , and{' '}
+                <span className="font-semibold text-yellow-400">MySQL</span>.
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <Zap className="h-5 w-5 mt-0.5 text-blue-400 shrink-0" />
+              <Zap className="mt-0.5 h-5 w-5 shrink-0 text-blue-400" />
               <div>
-                <strong>Database & Systems Design:</strong> Schema architecture, high-availability database clustering, load balancing, and RESTful API microservices.
+                <strong>Database & Systems Design:</strong> Schema architecture,
+                high-availability database clustering, load balancing, and
+                RESTful API microservices.
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <Sparkles className="h-5 w-5 mt-0.5 text-purple-400 shrink-0" />
+              <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-purple-400" />
               <div>
-                <strong>Web3 Advantage (Plus Skill):</strong> Smart contract development (<span className="text-purple-400 font-semibold">Solidity, Rust, Ethereum, Polkadot</span>) as a specialized complementary skill.
+                <strong>Web3 Advantage (Plus Skill):</strong> Smart contract
+                development (
+                <span className="font-semibold text-purple-400">
+                  Solidity, Rust, Ethereum, Polkadot
+                </span>
+                ) as a specialized complementary skill.
               </div>
             </li>
           </ul>

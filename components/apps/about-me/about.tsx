@@ -93,13 +93,33 @@ const About = () => {
       {/* Intro text */}
       <div className="space-y-4 text-sm leading-relaxed text-zinc-300 md:text-base">
         <p>
-          I am a versatile Software Engineer & Infrastructure Specialist with proven expertise in <strong>enterprise cloud environments (AWS)</strong>, <strong>physical server hardware installations</strong>, and <strong>Web2 product engineering</strong>. My career focuses on building mission-critical IT infrastructure and high-performance applications that empower organizations across Nigeria.
+          I am a versatile Software Engineer & Infrastructure Specialist with
+          proven expertise in{' '}
+          <strong>enterprise cloud environments (AWS)</strong>,{' '}
+          <strong>physical server hardware installations</strong>, and{' '}
+          <strong>Web2 product engineering</strong>. My career focuses on
+          building mission-critical IT infrastructure and high-performance
+          applications that empower organizations across Nigeria.
         </p>
         <p>
-          At <strong>eSupport NG Ltd</strong>, I engineer efficient customer support and ticketing platforms built on <strong>Golang</strong>, <strong>Nuxt.js</strong>, <strong>Vue.js</strong>, <strong>React/Next.js</strong>, and <strong>PostgreSQL/MySQL</strong>. On the infrastructure front, I have deployed full <strong>AWS Cloud Infrastructure</strong> for major institutions like the <strong>University of Ibadan (UI)</strong> and executed complex <strong>physical server hardware installations, racking, and network setups</strong> for national agencies including <strong>NIMC (National Identity Management Commission)</strong> and <strong>NELFUND (Nigerian Education Loan Fund)</strong>.
+          At <strong>eSupport NG Ltd</strong>, I engineer efficient customer
+          support and ticketing platforms built on <strong>Golang</strong>,{' '}
+          <strong>Nuxt.js</strong>, <strong>Vue.js</strong>,{' '}
+          <strong>React/Next.js</strong>, and <strong>PostgreSQL/MySQL</strong>.
+          On the infrastructure front, I have deployed full{' '}
+          <strong>AWS Cloud Infrastructure</strong> for major institutions like
+          the <strong>University of Ibadan (UI)</strong> and executed complex{' '}
+          <strong>
+            physical server hardware installations, racking, and network setups
+          </strong>{' '}
+          for national agencies including{' '}
+          <strong>NIMC (National Identity Management Commission)</strong> and{' '}
+          <strong>NELFUND (Nigerian Education Loan Fund)</strong>.
         </p>
         <p className="text-xs italic text-zinc-400">
-          * Note: I also maintain specialized secondary expertise in Web3 & decentralized smart contract engineering (Ethereum, Polkadot, Solidity, Rust) as a complementary technical value-add.
+          * Note: I also maintain specialized secondary expertise in Web3 &
+          decentralized smart contract engineering (Ethereum, Polkadot,
+          Solidity, Rust) as a complementary technical value-add.
         </p>
       </div>
 
@@ -111,13 +131,13 @@ const About = () => {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="flex items-start gap-3 rounded-lg border border-zinc-800 bg-zinc-900/60 p-4.5 backdrop-blur transition duration-300 hover:border-orange-500/50 hover:bg-zinc-900/90"
+            className="p-4.5 flex items-start gap-3 rounded-lg border border-zinc-800 bg-zinc-900/60 backdrop-blur transition duration-300 hover:border-orange-500/50 hover:bg-zinc-900/90"
           >
-            <div className="mt-0.5 shrink-0 rounded-lg bg-zinc-800/80 p-2.5">{card.icon}</div>
+            <div className="mt-0.5 shrink-0 rounded-lg bg-zinc-800/80 p-2.5">
+              {card.icon}
+            </div>
             <div>
-              <h3 className="text-sm font-bold text-zinc-100">
-                {card.title}
-              </h3>
+              <h3 className="text-sm font-bold text-zinc-100">{card.title}</h3>
               <p className="mt-1 text-xs leading-relaxed text-zinc-400">
                 {card.desc}
               </p>
