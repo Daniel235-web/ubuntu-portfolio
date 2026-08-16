@@ -10,11 +10,6 @@ export const sidebarItems = [
     imageSrc: '/about-me/experience.svg',
   },
   {
-    id: 'education',
-    title: 'Education',
-    imageSrc: '/about-me/education.svg',
-  },
-  {
     id: 'skills',
     title: 'Skills',
     imageSrc: '/about-me/skills.svg',
@@ -23,6 +18,11 @@ export const sidebarItems = [
     id: 'projects',
     title: 'Projects',
     imageSrc: '/about-me/projects.svg',
+  },
+  {
+    id: 'education',
+    title: 'Education',
+    imageSrc: '/about-me/education.svg',
   },
   {
     id: 'cv',

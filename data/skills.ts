@@ -1,5 +1,44 @@
 import _ from 'lodash';
 
+export const infrastructureCloud = [
+  {
+    id: _.uniqueId(),
+    name: 'AWS Infrastructure (Cloud)',
+    image:
+      'https://img.shields.io/badge/-AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white&labelColor=232F3E&color=FF9900',
+  },
+  {
+    id: _.uniqueId(),
+    name: 'Physical Enterprise Servers',
+    image:
+      'https://img.shields.io/badge/-Physical_Servers-1F2937?style=flat&logo=server&logoColor=white&labelColor=1F2937&color=1F2937',
+  },
+  {
+    id: _.uniqueId(),
+    name: 'Linux Server Admin',
+    image:
+      'https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=white&labelColor=E9500F&color=E9500F',
+  },
+  {
+    id: _.uniqueId(),
+    name: 'Docker',
+    image:
+      'https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white&labelColor=2496ED&color=2496ED',
+  },
+  {
+    id: _.uniqueId(),
+    name: 'PostgreSQL',
+    image:
+      'https://img.shields.io/badge/-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white&labelColor=336791&color=336791',
+  },
+  {
+    id: _.uniqueId(),
+    name: 'MySQL',
+    image:
+      'https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white&labelColor=4479A1&color=4479A1',
+  },
+];
+
 export const frontend = [
   {
     id: _.uniqueId(),
@@ -30,18 +69,6 @@ export const frontend = [
     name: 'TypeScript',
     image:
       'https://img.shields.io/badge/-TypeScript-007ACC?style=flat&logo=typescript&logoColor=white&labelColor=007ACC&color=007ACC',
-  },
-  {
-    id: _.uniqueId(),
-    name: 'HTML5',
-    image:
-      'https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white&labelColor=E34F26&color=E34F26',
-  },
-  {
-    id: _.uniqueId(),
-    name: 'CSS3',
-    image:
-      'https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white&labelColor=1572B6&color=1572B6',
   },
   {
     id: _.uniqueId(),
@@ -84,54 +111,9 @@ export const backend = [
   },
   {
     id: _.uniqueId(),
-    name: 'Express.js',
-    image:
-      'https://img.shields.io/badge/-Express.js-000000?style=flat&logo=express&logoColor=white&labelColor=000000&color=000000',
-  },
-  {
-    id: _.uniqueId(),
     name: 'REST API',
     image:
       'https://img.shields.io/badge/-REST_API-007ACC?style=flat&logo=swagger&logoColor=white&labelColor=007ACC&color=007ACC',
-  },
-];
-
-export const databaseCloud = [
-  {
-    id: _.uniqueId(),
-    name: 'PostgreSQL',
-    image:
-      'https://img.shields.io/badge/-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white&labelColor=336791&color=336791',
-  },
-  {
-    id: _.uniqueId(),
-    name: 'MySQL',
-    image:
-      'https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white&labelColor=4479A1&color=4479A1',
-  },
-  {
-    id: _.uniqueId(),
-    name: 'AWS Infrastructure',
-    image:
-      'https://img.shields.io/badge/-AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white&labelColor=232F3E&color=FF9900',
-  },
-  {
-    id: _.uniqueId(),
-    name: 'Physical Servers',
-    image:
-      'https://img.shields.io/badge/-Physical_Servers-1F2937?style=flat&logo=server&logoColor=white&labelColor=1F2937&color=1F2937',
-  },
-  {
-    id: _.uniqueId(),
-    name: 'Docker',
-    image:
-      'https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white&labelColor=2496ED&color=2496ED',
-  },
-  {
-    id: _.uniqueId(),
-    name: 'Linux',
-    image:
-      'https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=white&labelColor=E9500F&color=E9500F',
   },
 ];
 
