@@ -1,5 +1,13 @@
 import Image from 'next/image';
-import { Award, Code2, Cpu, Users } from 'lucide-react';
+import {
+  Award,
+  Briefcase,
+  Code2,
+  Cpu,
+  MapPin,
+  Rocket,
+  Layers,
+} from 'lucide-react';
 
 const About = () => {
   const yearsOfExperience = new Date().getFullYear() - 2020;
@@ -21,7 +29,7 @@ const About = () => {
       desc: 'Engineering scalable PostgreSQL & MySQL database architectures, REST APIs, and microservices for high-volume operations.',
     },
     {
-      icon: <Users className="h-5 w-5 text-blue-400" />,
+      icon: <Layers className="h-5 w-5 text-blue-400" />,
       title: 'Web3 & Decentralized Tech (Plus Skill)',
       desc: 'Leveraging smart contract engineering (Ethereum, Polkadot, Solidity, Rust) as a specialized complementary skill asset.',
     },
@@ -43,20 +51,24 @@ const About = () => {
         </div>
         <div className="flex-grow text-center md:text-left">
           <h1 className="text-3xl font-extrabold tracking-tight">
-            Hi, I&apos;m <span className="text-orange-500">Samuel Emmanuel</span> 👋
+            Hi, I&apos;m{' '}
+            <span className="text-orange-500">Samuel Emmanuel</span>
           </h1>
           <p className="mt-1 text-lg font-medium text-zinc-400">
             Full Stack Software Engineer (Web2 & Enterprise Solutions)
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-2 md:justify-start">
-            <span className="rounded-full border border-zinc-700 bg-zinc-800 px-2.5 py-1 text-xs text-zinc-300">
-              📍 Abuja / Lagos, Nigeria
+            <span className="inline-flex items-center gap-1 rounded-full border border-zinc-700 bg-zinc-800 px-2.5 py-1 text-xs text-zinc-300">
+              <MapPin className="h-3.5 w-3.5 text-zinc-400" />
+              Abuja / Lagos, Nigeria
             </span>
-            <span className="rounded-full border border-orange-900/30 bg-orange-950/40 px-2.5 py-1 text-xs text-orange-400">
-              💼 {yearsOfExperience}+ Years Experience
+            <span className="inline-flex items-center gap-1 rounded-full border border-orange-900/30 bg-orange-950/40 px-2.5 py-1 text-xs text-orange-400">
+              <Briefcase className="h-3.5 w-3.5 text-orange-400" />
+              {yearsOfExperience}+ Years Experience
             </span>
-            <span className="rounded-full border border-teal-900/30 bg-teal-950/40 px-2.5 py-1 text-xs text-teal-400">
-              🚀 Web3 as Added Advantage
+            <span className="inline-flex items-center gap-1 rounded-full border border-teal-900/30 bg-teal-950/40 px-2.5 py-1 text-xs text-teal-400">
+              <Rocket className="h-3.5 w-3.5 text-teal-400" />
+              Web3 as Added Advantage
             </span>
           </div>
         </div>
@@ -65,19 +77,32 @@ const About = () => {
       {/* Intro text */}
       <div className="space-y-4 text-sm leading-relaxed text-zinc-300 md:text-base">
         <p>
-          I am a dedicated Software Engineer specializing in Web2 product development,
-          enterprise application engineering, and scalable cloud & physical server infrastructure. My primary technical focus centers on crafting high-performance, user-friendly solutions using <strong>Golang</strong>, <strong>Nuxt.js</strong>, <strong>Vue.js</strong>, <strong>React/Next.js</strong>, <strong>Python/Django</strong>, and <strong>Node.js</strong>.
+          I am a dedicated Software Engineer specializing in Web2 product
+          development, enterprise application engineering, and scalable cloud &
+          physical server infrastructure. My primary technical focus centers on
+          crafting high-performance, user-friendly solutions using{' '}
+          <strong>Golang</strong>, <strong>Nuxt.js</strong>,{' '}
+          <strong>Vue.js</strong>, <strong>React/Next.js</strong>,{' '}
+          <strong>Python/Django</strong>, and <strong>Node.js</strong>.
         </p>
         <p>
-          From engineering customer support and ticketing platforms at eSupport NG Ltd to setting up AWS infrastructure for institutions like the University of Ibadan and deploying physical server installations for NIMC and NELFUND, I focus on clean code, database optimization (PostgreSQL & MySQL), and seamless operational performance.
+          From engineering customer support and ticketing platforms at eSupport
+          NG Ltd to setting up AWS infrastructure for institutions like the
+          University of Ibadan and deploying physical server installations for
+          NIMC and NELFUND, I focus on clean code, database optimization
+          (PostgreSQL & MySQL), and seamless operational performance.
         </p>
-        <p className="text-xs text-zinc-400 italic">
-          * Note: I also possess secondary expertise in Web3 & decentralized smart contract development (Ethereum, Substrate/Polkadot, Solidity, Rust) as an added technical advantage.
+        <p className="text-xs italic text-zinc-400">
+          * Note: I also possess secondary expertise in Web3 & decentralized
+          smart contract development (Ethereum, Substrate/Polkadot, Solidity,
+          Rust) as an added technical advantage.
         </p>
       </div>
 
       {/* Specialization Cards */}
-      <h2 className="mb-4 mt-8 text-xl font-bold text-zinc-200">Core Expertise & Pillars</h2>
+      <h2 className="mb-4 mt-8 text-xl font-bold text-zinc-200">
+        Core Expertise & Pillars
+      </h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {cards.map((card, i) => (
           <div

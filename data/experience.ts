@@ -132,13 +132,6 @@ export const experience = [
     location: 'Online Hackathon',
     description:
       'Engineered a public transparency application tracking allocation and spending of public funds down to the community level.',
-    tools: [
-      'Frame',
-      'Rust',
-      'Polkadot-SDK',
-      'Substrate',
-      'Foundry',
-      'Hardhat',
-    ],
+    tools: ['Frame', 'Rust', 'Polkadot-SDK', 'Substrate', 'Foundry', 'Hardhat'],
   },
 ];

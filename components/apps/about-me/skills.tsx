@@ -1,4 +1,5 @@
 import cls from 'classnames';
+import { Rocket, Zap, Code, Sparkles } from 'lucide-react';
 
 import { frontend, backend, databaseCloud, web3Skills } from '@/data/skills';
 
@@ -44,26 +45,38 @@ const Skills = () => {
           Skills & Technical Stack
         </div>
         <div className="space-y-3 text-sm leading-relaxed text-zinc-300">
-          <ul className="list-inside list-disc space-y-2">
-            <li>
-              🚀 <strong>Primary Web2 Focus:</strong> Production engineering with{' '}
-              <span className="text-orange-400 font-semibold">Golang</span>,{' '}
-              <span className="text-orange-400 font-semibold">Nuxt.js / Vue.js</span>,{' '}
-              <span className="text-orange-400 font-semibold">React / Next.js</span>, and{' '}
-              <span className="text-orange-400 font-semibold">Python / Django / Node.js</span>.
+          <ul className="space-y-3">
+            <li className="flex items-start gap-2">
+              <Rocket className="h-4 w-4 mt-0.5 text-orange-500 shrink-0" />
+              <div>
+                <strong>Primary Web2 Focus:</strong> Production engineering with{' '}
+                <span className="text-orange-400 font-semibold">Golang</span>,{' '}
+                <span className="text-orange-400 font-semibold">Nuxt.js / Vue.js</span>,{' '}
+                <span className="text-orange-400 font-semibold">React / Next.js</span>, and{' '}
+                <span className="text-orange-400 font-semibold">Python / Django / Node.js</span>.
+              </div>
             </li>
-            <li>
-              ⚡ <strong>Infrastructure & Databases:</strong> Architecting enterprise backend systems with{' '}
-              <span className="text-orange-400 font-semibold">PostgreSQL</span>,{' '}
-              <span className="text-orange-400 font-semibold">MySQL</span>,{' '}
-              <span className="text-orange-400 font-semibold">AWS Cloud Infrastructure</span>, and configuring{' '}
-              <span className="text-orange-400 font-semibold">Physical Enterprise Servers</span> (NIMC, NELFUND, UI).
+            <li className="flex items-start gap-2">
+              <Zap className="h-4 w-4 mt-0.5 text-yellow-400 shrink-0" />
+              <div>
+                <strong>Infrastructure & Databases:</strong> Architecting enterprise backend systems with{' '}
+                <span className="text-orange-400 font-semibold">PostgreSQL</span>,{' '}
+                <span className="text-orange-400 font-semibold">MySQL</span>,{' '}
+                <span className="text-orange-400 font-semibold">AWS Cloud Infrastructure</span>, and configuring{' '}
+                <span className="text-orange-400 font-semibold">Physical Enterprise Servers</span> (NIMC, NELFUND, UI).
+              </div>
             </li>
-            <li>
-              🧑‍💻 <strong>Product Quality:</strong> Emphasizing clean, scalable code architecture, reliable ticketing & support engines, and intuitive UX design.
+            <li className="flex items-start gap-2">
+              <Code className="h-4 w-4 mt-0.5 text-blue-400 shrink-0" />
+              <div>
+                <strong>Product Quality:</strong> Emphasizing clean, scalable code architecture, reliable ticketing & support engines, and intuitive UX design.
+              </div>
             </li>
-            <li>
-              🌟 <strong>Web3 Advantage (Plus Skill):</strong> Hands-on proficiency in smart contract engineering (<span className="text-teal-400 font-semibold">Solidity, Rust, Ethereum, Polkadot</span>) as a complementary value-add.
+            <li className="flex items-start gap-2">
+              <Sparkles className="h-4 w-4 mt-0.5 text-purple-400 shrink-0" />
+              <div>
+                <strong>Web3 Advantage (Plus Skill):</strong> Hands-on proficiency in smart contract engineering (<span className="text-teal-400 font-semibold">Solidity, Rust, Ethereum, Polkadot</span>) as a complementary value-add.
+              </div>
             </li>
           </ul>
         </div>
