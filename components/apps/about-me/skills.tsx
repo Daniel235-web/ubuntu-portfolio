@@ -15,7 +15,7 @@ const Section = ({ title, gradientFrom, gradientTo, items }: SectionProps) => {
     <div className="flex flex-col items-center">
       <div
         className={cls(
-          'mb-3 text-lg font-extrabold text-transparent text-center',
+          'mb-3 text-center text-lg font-extrabold text-transparent',
           `bg-gradient-to-r from-[${gradientFrom}] to-[${gradientTo}] bg-clip-text`,
         )}
       >
@@ -47,35 +47,60 @@ const Skills = () => {
         <div className="space-y-3 text-sm leading-relaxed text-zinc-300">
           <ul className="space-y-3">
             <li className="flex items-start gap-2">
-              <Rocket className="h-4 w-4 mt-0.5 text-orange-500 shrink-0" />
+              <Rocket className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" />
               <div>
                 <strong>Primary Web2 Focus:</strong> Production engineering with{' '}
-                <span className="text-orange-400 font-semibold">Golang</span>,{' '}
-                <span className="text-orange-400 font-semibold">Nuxt.js / Vue.js</span>,{' '}
-                <span className="text-orange-400 font-semibold">React / Next.js</span>, and{' '}
-                <span className="text-orange-400 font-semibold">Python / Django / Node.js</span>.
+                <span className="font-semibold text-orange-400">Golang</span>,{' '}
+                <span className="font-semibold text-orange-400">
+                  Nuxt.js / Vue.js
+                </span>
+                ,{' '}
+                <span className="font-semibold text-orange-400">
+                  React / Next.js
+                </span>
+                , and{' '}
+                <span className="font-semibold text-orange-400">
+                  Python / Django / Node.js
+                </span>
+                .
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <Zap className="h-4 w-4 mt-0.5 text-yellow-400 shrink-0" />
+              <Zap className="mt-0.5 h-4 w-4 shrink-0 text-yellow-400" />
               <div>
-                <strong>Infrastructure & Databases:</strong> Architecting enterprise backend systems with{' '}
-                <span className="text-orange-400 font-semibold">PostgreSQL</span>,{' '}
-                <span className="text-orange-400 font-semibold">MySQL</span>,{' '}
-                <span className="text-orange-400 font-semibold">AWS Cloud Infrastructure</span>, and configuring{' '}
-                <span className="text-orange-400 font-semibold">Physical Enterprise Servers</span> (NIMC, NELFUND, UI).
+                <strong>Infrastructure & Databases:</strong> Architecting
+                enterprise backend systems with{' '}
+                <span className="font-semibold text-orange-400">
+                  PostgreSQL
+                </span>
+                , <span className="font-semibold text-orange-400">MySQL</span>,{' '}
+                <span className="font-semibold text-orange-400">
+                  AWS Cloud Infrastructure
+                </span>
+                , and configuring{' '}
+                <span className="font-semibold text-orange-400">
+                  Physical Enterprise Servers
+                </span>{' '}
+                (NIMC, NELFUND, UI).
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <Code className="h-4 w-4 mt-0.5 text-blue-400 shrink-0" />
+              <Code className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" />
               <div>
-                <strong>Product Quality:</strong> Emphasizing clean, scalable code architecture, reliable ticketing & support engines, and intuitive UX design.
+                <strong>Product Quality:</strong> Emphasizing clean, scalable
+                code architecture, reliable ticketing & support engines, and
+                intuitive UX design.
               </div>
             </li>
             <li className="flex items-start gap-2">
-              <Sparkles className="h-4 w-4 mt-0.5 text-purple-400 shrink-0" />
+              <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-purple-400" />
               <div>
-                <strong>Web3 Advantage (Plus Skill):</strong> Hands-on proficiency in smart contract engineering (<span className="text-teal-400 font-semibold">Solidity, Rust, Ethereum, Polkadot</span>) as a complementary value-add.
+                <strong>Web3 Advantage (Plus Skill):</strong> Hands-on
+                proficiency in smart contract engineering (
+                <span className="font-semibold text-teal-400">
+                  Solidity, Rust, Ethereum, Polkadot
+                </span>
+                ) as a complementary value-add.
               </div>
             </li>
           </ul>
