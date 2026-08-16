@@ -71,11 +71,13 @@ Enjoy exploring!`,
     type: 'file',
     content: `Hi there! I'm Samuel Emmanuel.
 
-I'm a professional Full Stack and Blockchain Software Engineer specializing in the Node.js/React.js/Django/PostgreSQL and ethereum/polkadot/polygon ecosystems.
+I'm a Full Stack Software Engineer specializing in Web2 product development, customer support ticketing platforms, and scalable backend/frontend architectures.
 
-I have 6+ years of professional experience building web2 and web3 solutions, engineering secure smart contracts, and designing responsive system architectures.
+Core Stack: Golang, Nuxt.js, Vue.js, React/Next.js, Python/Django, Node.js, PostgreSQL, MySQL, AWS Cloud, and Physical Enterprise Server Deployments (eSupport NG Ltd, NIMC, NELFUND, University of Ibadan).
 
-Check out the folders or run 'neofetch' in the Terminal to see system details!`,
+* Web3 & Decentralized Technologies (Ethereum, Polkadot, Solidity, Rust) serve as a specialized complementary skill asset.
+
+Check out the About Me app or run 'neofetch' in the Terminal for system & professional details!`,
   },
   '/home/daniel235/Documents/contact.txt': {
     name: 'contact.txt',
@@ -83,9 +85,9 @@ Check out the folders or run 'neofetch' in the Terminal to see system details!`,
     content: `Contact Information:
 
 Name: Samuel Emmanuel (Daniel235)
-Role: Full Stack & Blockchain Engineer
-Location: Lagos, Nigeria
-Email: samuel.emmanuel@example.com
+Role: Full Stack Software Engineer (Web2 Product & Systems Specialist)
+Location: Abuja / Lagos, Nigeria
+Company: eSupport NG Ltd
 GitHub: https://github.com/Daniel235-web
 LinkedIn: https://linkedin.com/in/samuel-emmanuel`,
   },

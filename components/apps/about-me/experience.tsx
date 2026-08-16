@@ -10,7 +10,7 @@ const Experience = () => {
       }}
     >
       <div className="mb-10 text-center text-2xl font-bold text-orange-600 md:text-3xl">
-        Experience2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+        Experience
       </div>
       {experience.map((item) => (
         <div key={item.id} className="group relative py-6 pl-8 sm:pl-56">
