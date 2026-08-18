@@ -27,8 +27,8 @@ const About = () => {
     },
     {
       icon: <Code2 className="h-6 w-6 text-yellow-400" />,
-      title: 'Web2 Product & Software Engineering',
-      desc: 'Engineering robust customer support and ticketing engines at eSupport NG Ltd using Golang, Nuxt.js, Vue.js, React/Next.js, Python/Django, and Node.js.',
+      title: 'Web2 Product Engineering & Architecture',
+      desc: 'Building end-to-end customer-centric products and ticketing engines at eSupport NG Ltd using Golang, Nuxt.js, Vue.js, React/Next.js, Python/Django, and Node.js.',
     },
     {
       icon: <Database className="h-6 w-6 text-blue-400" />,
@@ -67,7 +67,7 @@ const About = () => {
             <span className="text-orange-500">Samuel Emmanuel</span>
           </h1>
           <p className="mt-1 text-lg font-medium text-zinc-300">
-            Full Stack Software Engineer & Enterprise Infrastructure Specialist
+            Full Stack Product Engineer & Enterprise Infrastructure Specialist
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-2 md:justify-start">
             <span className="inline-flex items-center gap-1 rounded-full border border-zinc-700 bg-zinc-800 px-2.5 py-1 text-xs text-zinc-300">
@@ -93,16 +93,14 @@ const About = () => {
       {/* Intro text */}
       <div className="space-y-4 text-sm leading-relaxed text-zinc-300 md:text-base">
         <p>
-          I am a versatile Software Engineer & Infrastructure Specialist with
+          I am a versatile <strong>Product Engineer & Infrastructure Specialist</strong> with
           proven expertise in{' '}
           <strong>enterprise cloud environments (AWS)</strong>,{' '}
           <strong>physical server hardware installations</strong>, and{' '}
-          <strong>Web2 product engineering</strong>. My career focuses on
-          building mission-critical IT infrastructure and high-performance
-          applications that empower organizations across Nigeria.
+          <strong>end-to-end Web2 product engineering</strong>. My focus bridges user experience, business objectives, and scalable technical architecture to deliver mission-critical software products and IT infrastructure.
         </p>
         <p>
-          At <strong>eSupport NG Ltd</strong>, I engineer efficient customer
+          At <strong>eSupport NG Ltd</strong>, I drive product engineering for efficient customer
           support and ticketing platforms built on <strong>Golang</strong>,{' '}
           <strong>Nuxt.js</strong>, <strong>Vue.js</strong>,{' '}
           <strong>React/Next.js</strong>, and <strong>PostgreSQL/MySQL</strong>.

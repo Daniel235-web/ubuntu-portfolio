@@ -71,7 +71,7 @@ Enjoy exploring!`,
     type: 'file',
     content: `Hi there! I'm Samuel Emmanuel.
 
-I'm a Full Stack Software Engineer specializing in Web2 product development, customer support ticketing platforms, and scalable backend/frontend architectures.
+I'm a Full Stack Product Engineer specializing in Web2 product engineering, customer support ticketing platforms, user-centric feature delivery, and scalable backend/frontend architectures.
 
 Core Stack: Golang, Nuxt.js, Vue.js, React/Next.js, Python/Django, Node.js, PostgreSQL, MySQL, AWS Cloud, and Physical Enterprise Server Deployments (eSupport NG Ltd, NIMC, NELFUND, University of Ibadan).
 
@@ -85,7 +85,7 @@ Check out the About Me app or run 'neofetch' in the Terminal for system & profes
     content: `Contact Information:
 
 Name: Samuel Emmanuel (Daniel235)
-Role: Full Stack Software Engineer (Web2 Product & Systems Specialist)
+Role: Full Stack Product Engineer (Web2 Product & Systems Specialist)
 Location: Abuja / Lagos, Nigeria
 Company: eSupport NG Ltd
 GitHub: https://github.com/Daniel235-web

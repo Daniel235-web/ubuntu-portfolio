@@ -20,7 +20,7 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: 'Samuel Emmanuel | Ubuntu 22.04',
   description:
-    'Samuel Emmanuel`s portfolio showcasing projects and expertise in full-stack development, working with Ubuntu 22.04, React, Next.js, Node.js,Django and more. Dive into professional experience, innovative solutions, and tech insights on a modern development environment.',
+    'Samuel Emmanuel`s portfolio showcasing projects and expertise in full-stack product engineering, working with Ubuntu 22.04, React, Next.js, Node.js, Golang, Python/Django and more. Dive into professional experience, innovative product solutions, and tech insights on a modern development environment.',
 };
 
 export default function RootLayout({

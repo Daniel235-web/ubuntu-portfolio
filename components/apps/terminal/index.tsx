@@ -525,6 +525,9 @@ const Terminal = ({ id }: TerminalProps) => {
                 <br />
                 <span>-------------------------</span>
                 <br />
+                <span className="font-bold text-orange-400">Role</span>: Full
+                Stack Product Engineer
+                <br />
                 <span className="font-bold text-orange-400">OS</span>: Ubuntu
                 22.04.3 LTS x86_64
                 <br />

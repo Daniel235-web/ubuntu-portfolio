@@ -6,7 +6,7 @@ export const experience = [
     timeline: '2022 - PRESENT',
     company: 'eSupport NG Ltd',
     url: 'https://esupport.ng/',
-    position: 'Full Stack Software Engineer',
+    position: 'Full Stack Product Engineer',
     location: 'Abuja, Nigeria',
     description:
       'At eSupport NG Ltd, we are pioneering the future of efficient customer support and issue resolution in Nigeria. Founded in 2022, we are a dynamic technology company dedicated to empowering organizations with robust, user-friendly support ticketing systems tailored to the unique needs of our local market. Headquartered in Abuja, Nigeria, our mission is to streamline operations, enhance user experiences, and drive productivity for businesses and institutions across the nation. Built scalable Web2 product solutions with Golang, Nuxt.js, PostgreSQL, and MySQL. Deployed AWS cloud infrastructure for clients like University of Ibadan (UI), and installed high-performance physical server infrastructure for organizations including NIMC (National Identity Management Commission) and NELFUND (Nigerian Education Loan Fund).',
@@ -29,7 +29,7 @@ export const experience = [
     timeline: 'July 2024 - March 2025',
     company: 'SSL Wireless',
     url: 'https://www.sslwireless.com/',
-    position: 'Software Specialist',
+    position: 'Product Engineering Specialist',
     location: 'Remote',
     description:
       'SSL Wireless is recognized for its rapid development and efficient project execution by working with industry-standard technologies. SSL Wireless mounts on its decade long industry experience, superior technical skills and highest quality of support services to provide scalable IT solutions as a leading Software development and services company. It has deep infiltration in the Value-Added Services, Banking, Corporate, and FinTech industry of Bangladesh.',
@@ -57,7 +57,7 @@ export const experience = [
     timeline: 'JAN 2022 - NOV 2023',
     company: 'Sheba Technologies Limited (STL)',
     url: 'https://shebatech.com.bd/',
-    position: 'Software Engineer',
+    position: 'Product Engineer',
     location: 'Remote',
     description:
       'Sheba Technologies Limited (STL) is part of the Sheba Group conglomerate which has been in Tech business for almost quarter of a century. STL is fully committed to bring world class technologically advanced Business Process Automation by delivering architecturally superior Software solution, Off-the-Shelf customizable Software, Artificial Intelligence and Machine Learning to our esteemed clients who are also our long-term strategic partners.',
@@ -81,7 +81,7 @@ export const experience = [
     timeline: 'Jan 2021 - DEC 2021',
     company: 'PAP International Ltd.',
     url: 'https://papint.asia/',
-    position: 'Software Engineer',
+    position: 'Product Engineer',
     location: 'Remote',
     description:
       'PAP International is a Technology development and Business solution provider that covers all areas of the Industries. The company is now fully setup and operating in Bangladesh as an extension of the parent company in UK.',

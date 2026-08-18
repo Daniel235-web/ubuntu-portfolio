@@ -80,8 +80,8 @@ const Skills = () => {
             <li className="flex items-start gap-2">
               <Code className="mt-0.5 h-5 w-5 shrink-0 text-yellow-400" />
               <div>
-                <strong>Web2 Full Stack Engineering:</strong> Building scalable
-                software applications at eSupport NG Ltd using{' '}
+                <strong>Web2 Product Engineering:</strong> Building scalable
+                product applications at eSupport NG Ltd using{' '}
                 <span className="font-semibold text-yellow-400">
                   Golang, Nuxt.js, Vue.js, React/Next.js, Python/Django,
                   Node.js, PostgreSQL
