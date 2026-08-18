@@ -93,20 +93,25 @@ const About = () => {
       {/* Intro text */}
       <div className="space-y-4 text-sm leading-relaxed text-zinc-300 md:text-base">
         <p>
-          I am a versatile <strong>Product Engineer & Infrastructure Specialist</strong> with
+          I am a versatile{' '}
+          <strong>Product Engineer & Infrastructure Specialist</strong> with
           proven expertise in{' '}
           <strong>enterprise cloud environments (AWS)</strong>,{' '}
           <strong>physical server hardware installations</strong>, and{' '}
-          <strong>end-to-end Web2 product engineering</strong>. My focus bridges user experience, business objectives, and scalable technical architecture to deliver mission-critical software products and IT infrastructure.
+          <strong>end-to-end Web2 product engineering</strong>. My focus bridges
+          user experience, business objectives, and scalable technical
+          architecture to deliver mission-critical software products and IT
+          infrastructure.
         </p>
         <p>
-          At <strong>eSupport NG Ltd</strong>, I drive product engineering for efficient customer
-          support and ticketing platforms built on <strong>Golang</strong>,{' '}
-          <strong>Nuxt.js</strong>, <strong>Vue.js</strong>,{' '}
-          <strong>React/Next.js</strong>, and <strong>PostgreSQL/MySQL</strong>.
-          On the infrastructure front, I have deployed full{' '}
-          <strong>AWS Cloud Infrastructure</strong> for major institutions like
-          the <strong>University of Ibadan (UI)</strong> and executed complex{' '}
+          At <strong>eSupport NG Ltd</strong>, I drive product engineering for
+          efficient customer support and ticketing platforms built on{' '}
+          <strong>Golang</strong>, <strong>Nuxt.js</strong>,{' '}
+          <strong>Vue.js</strong>, <strong>React/Next.js</strong>, and{' '}
+          <strong>PostgreSQL/MySQL</strong>. On the infrastructure front, I have
+          deployed full <strong>AWS Cloud Infrastructure</strong> for major
+          institutions like the <strong>University of Ibadan (UI)</strong> and
+          executed complex{' '}
           <strong>
             physical server hardware installations, racking, and network setups
           </strong>{' '}
